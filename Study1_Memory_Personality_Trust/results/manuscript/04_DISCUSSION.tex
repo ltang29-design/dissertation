@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+\doublespacing
+\title{\textbf{Discussion: Remote VR Trust Study}}
+\author{[Author Names]}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Discussion}
+
+This remote VR study examined how memory function, agent personality, and personality matching affect trust in AI agents during navigation, revealing critical patterns that challenge conventional trust conceptualizations. Our findings demonstrate that memory function paradoxically impairs behavioral confidence while leaving trust attitudes unchanged, personality matching enhances trust calibration without increasing trust levels, and trust calibration failures reveal universal automation bias across all conditions. These findings have profound implications for understanding trust mechanisms, the role of personality congruence in human-AI interaction, and the design of memory-enhanced AI systems.
+
+\subsection{Memory Function: The Paradox of Shared Knowledge}
+
+Our most striking finding is that memory function produced extremely large detrimental effects on decision confidence (see Figure~\ref{fig:decision_time_effects}), with effect sizes ranging from \textit{d} = 0.889 to \textit{d} = 2.45 (all \textit{p} $<$ .001), while showing no effects on self-reported trust attitudes (all \textit{p} $>$ .14). This dissociation between attitudinal trust and behavioral confidence challenges fundamental assumptions that trust-enhancing features uniformly benefit all trust facets.
+
+The learning curve reversal effect was particularly striking: participants with memory function became 91\% slower in Phase 2 (memory-based navigation), while those without memory became faster. This phase selectivity—no effects in Phase 1 (guided navigation) but dramatic effects in Phase 2—suggests memory function created cognitive conflict specifically when navigation depended on independent memory recall, transforming what should be a collaborative advantage into a competitive disadvantage.
+
+Qualitative analysis provides crucial mechanistic explanation (see Figure~\ref{fig:topic_modeling}). The ``memory verification'' cluster (81.8\% from +MAPK participants) revealed participants used memory function to audit agent recommendations rather than collaborate. Language patterns included comparing own recollection to agent suggestions, questioning recommendations based on personal memory, and checking agent accuracy against remembered landmarks. This verification strategy transformed memory from shared resource into comparative standard, creating cognitive conflict: participants simultaneously processed agent recommendations AND cross-checked against own memory, effectively doubling cognitive load.
+
+This finding has profound implications for the design of memory-enhanced AI systems. Rather than simply adding memory capabilities, designers must consider how memory references will be interpreted by users. The key insight is that shared knowledge can create competition when it provides independent verification standards. Common ground theory \citep{clark1991grounding} predicts shared knowledge facilitates cooperation, but our findings reveal an important boundary condition: shared knowledge facilitates cooperation when it reduces uncertainty, but creates competition when it provides independent verification standards.
+
+In spatial navigation, users develop strong independent spatial memory. Agent memory references don't reduce uncertainty but provide alternative memory trace, prompting comparison and verification. This may differ fundamentally in domains where users lack independent knowledge (e.g., medical diagnosis, where AI memory of symptoms would be welcomed rather than checked). Memory-enhanced AI systems should acknowledge user memory, frame collaboratively, reference details users wouldn't remember, and avoid creating verification standards that encourage auditing.
+
+\subsection{Personality Matching: The Calibration Advantage}
+
+Our findings reveal a critical distinction between trust level and trust calibration in personality matching effects. While personality matching showed no significant effects on trust attitudes or compliance behaviors (all \textit{p} $>$ .30), it was the only variable that significantly improved trust calibration—the alignment between self-reported trust and behavioral compliance. In the matched condition, post-task trust significantly correlated with compliance rate, \textit{r}(44) = 0.365, \textit{p} = .013, indicating participants' self-reported trust aligned with their behavioral trust. In the mismatched condition, this correlation was absent, \textit{r}(44) = 0.058, \textit{p} = .704.
+
+This finding challenges the traditional assumption that personality matching primarily affects trust levels through similarity-attraction mechanisms. Instead, our results suggest that personality matching operates primarily on metacognitive processes—self-awareness of trust—enabling better attitude-behavior alignment. The calibration benefit likely operates through reduced cognitive load in self-assessment. When participants interact with agents whose personality matches their own, they may experience less cognitive conflict in evaluating their own trust responses, leading to more accurate self-assessment of their trust levels.
+
+This finding fundamentally reframes personalization strategies in human-AI interaction. Rather than focusing on increasing trust levels through similarity, personalization should focus on improving trust calibration through enhanced self-awareness. This represents a shift from ``build more trust'' to ``build better calibrated trust.'' Personality matching may be more valuable for expert users who need accurate self-assessment, and calibration benefits may be domain-specific and require validation across different contexts.
+
+Interestingly, even introverted participants rated extrovert agents more likeable (\textit{d} = $-$0.471), indicating universal appeal of extrovert characteristics rather than similarity-based preferences. This suggests universal design (optimize for general appeal) may be more effective than personalization (customize to individual) for trust building, though personality matching retains value for calibration enhancement.
+
+\subsection{Trust Calibration: The Over-Reliance Crisis}
+
+Our comprehensive analysis revealed that trust calibration failures were universal across all experimental conditions (all \textit{p} $>$ .54 for memory function and personality matching effects on compliance types). Compliance decomposition revealed critical safety concern (see Figure~\ref{fig:compliance_patterns}): 88.5\% appropriate compliance (high trust in correct guidance) combined with 76.4\% overcompliance (following agent when incorrect). This automation bias pattern \citep{parasuraman2010automation} demonstrates that trust calibration problems transcend specific AI features or user characteristics, representing a fundamental challenge in human-AI interaction.
+
+This universal calibration failure is particularly concerning because uncalibrated high trust produces inconsistent appropriate reliance—sometimes correct, sometimes over-rely—while high overall compliance (72.9\%) creates illusion of successful collaboration, masking that users cannot discriminate accuracy. In safety-critical domains, 76.4\% acceptance of erroneous guidance could be catastrophic. Medical AI errors accepted at this rate would lead to systematic mistreatment; autonomous vehicle errors would cause accidents.
+
+Several factors explain universal poor calibration. While participants experienced dead ends (error feedback), this may have been insufficiently salient or immediate. Errors were distributed (Corners 3, 7, 9), potentially preventing pattern recognition. Agent accuracy rate (70\%) may have been too high to trigger systematic skepticism. Initial trust (84.8\% at Corner 1) suggests default trust prior, and confirmation bias may have maintained this despite evidence: participants selectively attended to correct guidance (7 instances) over errors (3 instances), reinforcing initial trust. Intelligence-trust correlation (\textit{r} = .569) was strong, but perceived intelligence didn't correlate with actual agent accuracy (agent was always 70\% accurate regardless). Participants may have been overconfident in their ability to assess agent competence, leading to calibration failure.
+
+These findings fundamentally reframe AI trust objectives. Rather than ``build trust'' (which our participants already had), the goal should be ``build calibrated trust'': high appropriate compliance, low overcompliance, dynamic trust adjustment based on performance, and discrimination ability between reliable and unreliable guidance. This reframing shifts focus from social features enhancing likeability to transparency features enabling discrimination.
+
+\subsection{Agent Perceptions and Trust Formation}
+
+Perceived intelligence emerged as the strongest predictor of post-task trust (\textit{r} = .569, \textit{p} $<$ .001), explaining 32.4\% of trust variance—substantially larger than any experimental manipulation effect (see Figure~\ref{fig:perception_correlations}). Likeability was the second-strongest predictor (\textit{r} = .458, \textit{p} $<$ .001), explaining 21.0\% of variance. Together, intelligence and likeability perceptions explained approximately 40\% of post-task trust variance, indicating perceived agent competence and social appeal are primary drivers of trust attitudes.
+
+This finding challenges personalization strategies emphasizing user-AI similarity. Rather than ``match AI personality to user,'' findings suggest ``ensure AI demonstrates competence.'' The dominance of competence perceptions over personality similarity (mentioned 71\% vs. 3\% in qualitative data) indicates that trust formation prioritizes performance capability over social congruence.
+
+Agent personality showed selective effects: significant impact on agent perceptions (particularly likeability, \textit{p} = .027) and Phase 1 decision speed (\textit{p} = .007), conditional effect on trust attitudes (\textit{p} = .047 without memory), but no effects on compliance (\textit{p} $>$ .13). The pattern suggests introvert agents optimize task efficiency (faster decisions) while extrovert agents optimize social appeal (higher likeability). This dissociation between efficiency and appeal has important design implications: for task-focused applications, introvert agents may be preferable despite lower likeability ratings; for applications requiring user engagement and satisfaction, extrovert agents may be preferable despite slower initial performance.
+
+\subsection{VR Experience and Individual Differences}
+
+VR self-efficacy showed significant moderate positive correlation with post-task trust (\textit{r} = .272, \textit{p} = .009), explaining 7.4\% of trust variance. This effect was selective to attitudinal trust rather than behavioral trust, suggesting VR confidence influences trust beliefs but doesn't translate to trust behaviors. VR familiarity and immersion showed no significant relationships with any trust measure (\textit{p} $>$ .11), indicating skill/confidence in VR matters more than mere exposure or subjective immersion for trust development.
+
+Participant personality showed limited effects on trust outcomes. Introverted participants showed marginally higher pre-task trust (\textit{d} = $-$0.459, \textit{p} = .089), but this effect disappeared post-task, suggesting experience equalized personality differences. No other participant personality effects reached significance, indicating that individual personality characteristics play minimal role in trust formation compared to agent characteristics and task performance.
+
+\subsection{Methodological Contributions and Broader Implications}
+
+Our multi-method approach (self-reports + behaviors + decision time + qualitative) revealed patterns invisible to single methods. Compliance decomposition revealed over-reliance masked by high overall rate; qualitative explained quantitative (verification strategy explaining decision time); decision time detected effects invisible to attitudes and compliance; topic modeling revealed framework differences invisible to content analysis. This demonstrates necessity of multi-method assessment for comprehensive trust understanding.
+
+The appropriate/over/undercompliance decomposition enabled calibration assessment impossible with overall compliance rate. This measurement innovation should be adopted in future automation trust research to distinguish calibrated from uncalibrated trust, identify over-reliance vs. under-reliance, assess safety implications beyond trust level, and measure automation bias quantitatively.
+
+This study demonstrated the feasibility and validity of remote VR research using consumer-grade equipment. The remote design enabled larger sample sizes and more diverse participants while maintaining experimental control. This approach should be adopted more widely in human-robot interaction research.
+
+These findings have broader implications for human-AI interaction. Over-reliance (not distrust) may be primary risk in AI adoption. Safety mechanisms should focus on preventing blind acceptance, not just building trust. Users need not just to trust AI but to understand when AI is likely correct vs. incorrect. Transparency serves calibration, not just trust. Competence demonstration matters more than personality matching for trust. Personalization efforts should prioritize performance optimization over social matching. Self-reports insufficient; must measure behavioral trust and calibration quality. Over-reliance can coexist with moderate attitudinal trust.
+
+\subsection{Limitations and Future Directions}
+
+Several limitations should be noted. First, the remote VR design, while innovative, may have introduced uncontrolled variables (home environment, technical issues). Second, the navigation task, while ecologically valid, may not generalize to other domains. Third, the 70\% accuracy rate was chosen for experimental purposes but may not reflect real-world AI performance. Fourth, the study focused on a single interaction session; trust calibration may develop differently over extended use.
+
+Future research should examine trust calibration development over extended interactions, domain-specific effects (medical, financial, educational AI), individual differences in calibration ability, effectiveness of proposed calibration interventions, cultural differences in trust calibration patterns, and effects of different AI accuracy rates on calibration.
+
+\section{Conclusion}
+
+This remote VR study demonstrates three critical insights about memory function, personality matching, and trust in human-AI interaction. First, memory function produces a paradoxical effect: impairing behavioral confidence (\textit{d} = 2.45) while leaving attitudinal trust unchanged, revealing that shared knowledge can create competition rather than collaboration when it provides independent verification standards. Second, personality matching enhances trust calibration without increasing trust levels (\textit{r} = .365 vs. .058), suggesting that similarity operates primarily on metacognitive processes rather than trust attitudes. Third, trust calibration failures are universal across all experimental conditions (76.4\% overcompliance), revealing automation bias as the primary challenge in human-AI trust rather than trust building.
+
+These findings fundamentally reframe our understanding of trust in human-AI interaction. Rather than focusing on ``building more trust,'' the essential objective should be building appropriately calibrated trust that enables users to discriminate when to rely on AI versus when to exercise independent judgment. Memory-enhanced AI systems must be designed to avoid creating verification standards that encourage auditing rather than collaboration. Personality matching strategies should prioritize metacognitive support over trust enhancement.
+
+Most critically, our findings reveal that trust calibration problems transcend specific AI features or user characteristics, representing a fundamental challenge requiring systematic intervention. Future AI design should prioritize transparency mechanisms supporting calibration over social features building undifferentiated trust. The remote VR methodology demonstrated here opens new possibilities for large-scale human-robot interaction research while maintaining experimental rigor.
+
+As AI systems become increasingly prevalent in daily life, understanding and addressing the mechanisms of memory function effects, personality matching benefits, and trust calibration failures becomes not just an academic concern but a critical safety imperative for safe, effective human-AI collaboration.
+
+\bibliography{references}
+\bibliographystyle{apa}
+
+\end{document}

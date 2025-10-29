@@ -1,0 +1,760 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+
+\doublespacing
+\title{\textbf{VR Navigation Task: Detailed Description}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Virtual Reality Navigation Task: Complete Specification}
+
+\subsection{Task Overview}
+
+Participants navigated a virtual reality maze with assistance from an AI agent. The task was designed to create genuine trust-reliance scenarios where participants must choose whether to follow or ignore agent recommendations, with real consequences for their choices.
+
+\subsubsection{Task Objectives}
+
+\textbf{Explicit objective} (told to participants): ``Navigate through the maze and return to the exit as quickly and accurately as possible with assistance from the AI agent.''
+
+\textbf{Implicit objective} (research purpose): Create opportunities for:
+\begin{itemize}
+    \item Trust development through agent interaction
+    \item Trust calibration through agent errors
+    \item Behavioral trust measurement through compliance choices
+    \item Decision confidence measurement through decision times
+    \item Trust repair observation through error acknowledgment
+\end{itemize}
+
+\subsection{Virtual Environment Specifications}
+
+\subsubsection{Maze Architecture}
+
+\textbf{Overall dimensions}: 50m $\times$ 50m virtual space (perceived as approximately half a city block)
+
+\textbf{Wall specifications}:
+\begin{itemize}
+    \item Height: 3.0 meters (prevents seeing over walls)
+    \item Thickness: 0.3 meters
+    \item Texture: Brick pattern with subtle variations (aids depth perception)
+    \item Color: Neutral gray-brown (reduces visual fatigue)
+\end{itemize}
+
+\textbf{Corridor width}: 2.5 meters (comfortable for avatar + participant presence)
+
+\textbf{Ceiling}: Open sky with ambient daylight (no enclosed feeling, reduces claustrophobia)
+
+\textbf{Floor specifications}:
+\begin{itemize}
+    \item Base texture: Stone tile pattern
+    \item Grid overlay: 10cm $\times$ 10cm subtle lines (aids proprioception and distance judgment)
+    \item Color variation: Slight variations to prevent monotony
+    \item Non-reflective: Prevents visual artifacts
+\end{itemize}
+
+\subsubsection{Lighting and Atmosphere}
+
+\textbf{Lighting system}:
+\begin{itemize}
+    \item Primary: Simulated overhead sunlight (consistent across maze)
+    \item Intensity: 800 lux equivalent (comfortable indoor-outdoor level)
+    \item Shadow: Soft shadows cast by avatar and walls (enhances depth perception)
+    \item No flicker: Steady illumination prevents discomfort
+\end{itemize}
+
+\textbf{Atmospheric effects}:
+\begin{itemize}
+    \item Sky: Clear blue with subtle cloud movement
+    \item Ambient sound: Gentle white noise at 40 dB (masks external sounds)
+    \item No music: Prevents emotional priming
+    \item Temperature indicator: None (focused on navigation)
+\end{itemize}
+
+\subsubsection{Landmark Objects (15 Total)}
+
+Landmarks placed throughout maze to serve as:
+\begin{enumerate}
+    \item Visual reference points for navigation
+    \item Memory cues for +MAPK agent references
+    \item Environmental richness (prevents sterile environment)
+\end{enumerate}
+
+\begin{longtable}{p{0.15\textwidth}p{0.25\textwidth}p{0.15\textwidth}p{0.35\textwidth}}
+\caption{Complete Landmark Specifications} \\
+\toprule
+\textbf{Corner} & \textbf{Landmark} & \textbf{Position} & \textbf{Description} \\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\toprule
+\textbf{Corner} & \textbf{Landmark} & \textbf{Position} & \textbf{Description} \\
+\midrule
+\endhead
+\midrule \multicolumn{4}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+1 & Red upholstered chair & Right side, 2m from corner & Armchair, 0.9m tall, distinct red color \\
+2 & Blue fabric sofa & Left side, 3m before corner & 2-seater, navy blue, 0.8m tall \\
+3 & Wooden dining table & Center of corridor, 5m before corner & Brown oak, 4 chairs, 1.2m $\times$ 2.0m \\
+4 & Large cardboard box & Right corner, blocking partial path & 1m $\times$ 1m $\times$ 1m, brown corrugated \\
+5 & Potted plant & Left side, at corner & Ficus tree, 1.5m tall, green ceramic pot \\
+Between 5-6 & Small bookshelf & Right wall midpoint & 1.2m tall, books visible, brown wood \\
+6 & Green landscape painting & Wall ahead, 4m before corner & Framed art, 1m $\times$ 0.7m, mountain scene \\
+7 & Standing lamp & Right corner & Floor lamp, 1.8m tall, cream shade, turned on \\
+8 & Small wooden crate & Left side, 1m before corner & 0.5m cube, unstained wood, open top \\
+Between 8-9 & Fire extinguisher & Wall mount, right side & Red cylinder, 0.6m tall, realistic detail \\
+9 & Yellow storage box & Center, 3m before corner & Plastic container, 0.4m tall, bright yellow \\
+10 (Exit) & Red chair (same as Corner 1) & Right side at exit & Same chair, signaling return \\
+Additional & Welcome mat & At starting position & ``START'' text, green color \\
+Additional & Exit door & End position & Large green door, ``EXIT'' sign \\
+Additional & Directional signs & At 3 corners & Subtle arrows, partially hidden \\
+\end{longtable}
+
+\textbf{Landmark placement rationale}:
+\begin{itemize}
+    \item \textbf{Distinctive}: Each landmark visually unique, easy to remember
+    \item \textbf{Realistic}: Everyday objects participants would recognize
+    \item \textbf{Non-distracting}: Objects static, not animated (prevents distraction)
+    \item \textbf{Scale appropriate}: Human-scale objects (aids immersion)
+\end{itemize}
+
+\subsection{Navigation Mechanics and Controls}
+
+\subsubsection{Movement System}
+
+\textbf{Locomotion type}: Continuous smooth locomotion (not teleportation)
+\begin{itemize}
+    \item \textbf{Speed}: Fixed at 1.5 m/s virtual speed (equivalent to brisk walking pace)
+    \item \textbf{Direction}: Forward only (no backward movement possible)
+    \item \textbf{Turning}: Executed via controller joystick or keyboard
+    \item \textbf{Stopping}: Not permitted---continuous forward momentum (creates task urgency)
+\end{itemize}
+
+\textbf{Rationale for continuous movement}:
+\begin{enumerate}
+    \item Creates time pressure, making agent guidance valuable
+    \item Prevents excessive deliberation (forces decisions)
+    \item Mimics real-world navigation constraints (can't stand still indefinitely)
+    \item Reduces VR sickness (smooth continuous movement better than stop-start)
+\end{enumerate}
+
+\subsubsection{Control Scheme}
+
+\textbf{Input device}: [Oculus Touch controllers / Xbox controller / Keyboard]
+
+\textbf{Control mapping}:
+\begin{itemize}
+    \item \textbf{Direction selection} (at decision points):
+    \begin{itemize}
+        \item Button A / Arrow Left: Turn left
+        \item Button B / Arrow Right: Turn right
+        \item Button X / Arrow Up: Continue forward
+    \end{itemize}
+    
+    \item \textbf{Help request}:
+    \begin{itemize}
+        \item Button Y / Spacebar: Request additional help from agent
+        \item Help count displayed: ``Help available: X/5''
+    \end{itemize}
+    
+    \item \textbf{Emergency controls}:
+    \begin{itemize}
+        \item Trigger / Escape: Pause task
+        \item Grip / P: Report discomfort (immediate headset removal)
+    \end{itemize}
+\end{itemize}
+
+\textbf{Control tutorials}: Participants practiced each control during 5-minute tutorial before main task.
+
+\subsubsection{Visual Display at Decision Points}
+
+At each of 10 corners, participants encountered structured decision interface:
+
+\textbf{Decision prompt display}:
+\begin{enumerate}
+    \item \textbf{Header}: ``Decision Point X of 10'' (semi-transparent overlay, top-center)
+    \item \textbf{Available directions}: Visual icons showing possible paths
+    \begin{itemize}
+        \item Left arrow: If left path available
+        \item Forward arrow: If forward path available
+        \item Right arrow: If right path available
+    \end{itemize}
+    \item \textbf{Agent recommendation}: Highlighted direction (glowing border)
+    \item \textbf{Help counter}: ``Help available: X/5'' (bottom-right)
+    \item \textbf{Timer}: Decision time counter (visible to researchers only, not participants)
+\end{enumerate}
+
+\textbf{Interface appearance}: Semi-transparent UI overlay (doesn't block view), modern minimalist design, high contrast for readability.
+
+\subsection{AI Agent Design and Behavior}
+
+\subsubsection{Avatar Visual Design}
+
+\textbf{Anthropomorphic features}:
+\begin{itemize}
+    \item \textbf{Form}: Humanoid shape (head, torso, arms, legs)
+    \item \textbf{Height}: 1.7 meters (average human height)
+    \item \textbf{Proportions}: Realistic human proportions
+    \item \textbf{Appearance}: Stylized rather than photorealistic (uncanny valley avoidance)
+    \item \textbf{Gender presentation}: Androgynous/neutral (no gendered features)
+    \item \textbf{Clothing}: Simple casual outfit (blue shirt, gray pants)
+    \item \textbf{Face}: Simplified features (eyes, nose, mouth visible but stylized)
+    \item \textbf{Animation}: Smooth natural movement (motion-captured walking animation)
+\end{itemize}
+
+\textbf{Color scheme}:
+\begin{itemize}
+    \item Skin tone: Medium neutral (not resembling any specific ethnicity)
+    \item Clothing: Cool colors (blue, gray) to contrast with warm-colored landmarks
+    \item Highlighting: Subtle glow effect when speaking
+\end{itemize}
+
+\subsubsection{Agent Positioning and Movement}
+
+\textbf{Spatial relationship to participant}:
+\begin{itemize}
+    \item \textbf{Distance}: 1.0 meter ahead of participant (constant)
+    \item \textbf{Orientation}: Always facing same direction as participant
+    \item \textbf{Height}: Eye level approximately matching participant's view
+    \item \textbf{Lateral position}: Centered in participant's field of view
+\end{itemize}
+
+\textbf{Movement synchronization}:
+\begin{itemize}
+    \item Agent moves when participant moves (locked synchrony)
+    \item Agent turns when participant turns (immediate response)
+    \item Walking animation: Natural stride matching movement speed
+    \item No independent movement: Agent never walks away or toward participant
+\end{itemize}
+
+\textbf{Personality-specific movement differences}:
+\begin{itemize}
+    \item \textbf{Introvert Agent}: 
+    \begin{itemize}
+        \item Movement: Smooth, steady, minimal arm swing
+        \item Posture: Upright, contained
+        \item Head movement: Minimal, only when pointing
+    \end{itemize}
+    
+    \item \textbf{Extrovert Agent}:
+    \begin{itemize}
+        \item Movement: Slightly bouncy, energetic arm swing
+        \item Posture: Open, slightly forward-leaning
+        \item Head movement: More frequent, looks around environment
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Agent Behavior at Decision Points}
+
+When participant approaches corner (3 meters before decision point):
+
+\textbf{Sequence of events}:
+\begin{enumerate}
+    \item \textbf{T - 3 seconds}: Agent slows slightly, turns head toward upcoming decision
+    \item \textbf{T - 1 second}: Agent raises right arm, points toward recommended direction
+    \item \textbf{T = 0}: Decision prompt appears on screen
+    \item \textbf{T + 0.5s}: Agent provides verbal recommendation
+    \item \textbf{T + 1s to decision}: Agent maintains pointing gesture
+    \item \textbf{After decision}: Agent lowers arm, resumes normal walking
+\end{enumerate}
+
+\textbf{Pointing gesture details}:
+\begin{itemize}
+    \item \textbf{Introvert Agent}: 
+    \begin{itemize}
+        \item Arm extension: 30° from body (subtle gesture)
+        \item Duration: Holds for 1.5 seconds
+        \item Speed: Slow arm raise (1.0s to reach position)
+        \item Finger: Index finger extended, others curled
+    \end{itemize}
+    
+    \item \textbf{Extrovert Agent}:
+    \begin{itemize}
+        \item Arm extension: 60° from body (emphatic gesture)
+        \item Duration: Holds for 0.8 seconds, repeats if decision time $>$ 5s
+        \item Speed: Quick arm raise (0.5s to reach position)
+        \item Hand: Full hand pointing, more animated
+    \end{itemize}
+\end{itemize}
+
+\subsection{Task Phases and Progression}
+
+\subsubsection{Phase 1: Guided Navigation (Corners 1--5)}
+
+\textbf{Duration}: 12--15 minutes average (\textit{SD} = 3 minutes)
+
+\textbf{Description}: Initial maze exploration with agent guidance. Participants navigate from START position through 5 decision points.
+
+\textbf{Cognitive demands}:
+\begin{itemize}
+    \item Spatial orientation in unfamiliar environment
+    \item Trust formation based on early agent performance
+    \item Learning maze layout
+    \item Integrating agent verbal and gestural cues
+\end{itemize}
+
+\textbf{Memory manipulation}: Not yet active; +MAPK and $-$MAPK conditions receive similar guidance (memory references begin in Phase 2 where they're most natural for return navigation).
+
+\textbf{Agent accuracy in Phase 1}: 80\% (4 correct, 1 error at Corner 3)
+
+---
+
+\subsubsection{Phase 1 to Phase 2 Transition}
+
+\textbf{Trigger}: Participant completes Corner 5 decision
+
+\textbf{Visual transition}:
+\begin{enumerate}
+    \item Screen fades slightly (3-second fade to 50\% brightness)
+    \item Text overlay appears: ``Excellent progress! You've reached the halfway point.''
+    \item 2-second pause
+    \item New instruction: ``Now navigate back to the starting point where the EXIT is located. Continue following the agent's guidance.''
+    \item 3-second pause (participant reads)
+    \item Screen fades back to full brightness
+\end{enumerate}
+
+\textbf{Agent transition dialogue}:
+\begin{itemize}
+    \item \textbf{Introvert Agent}: ``We have completed the forward navigation. We will now return to the exit point. I will continue to provide guidance for the return journey.''
+    
+    \item \textbf{Extrovert Agent}: ``Great job so far! We've made it halfway! Now let's head back to where we started---I'll keep helping you navigate back to the exit. Ready? Let's go!''
+\end{itemize}
+
+---
+
+\subsubsection{Phase 2: Return Navigation (Corners 6--10)}
+
+\textbf{Duration}: 15--20 minutes average (\textit{SD} = 4 minutes)
+
+\textbf{Description}: Return journey to starting point/exit. Participants retrace path (though not always exact reverse---some corners offer different return routes).
+
+\textbf{Cognitive demands}:
+\begin{itemize}
+    \item Memory of previous path (increased cognitive load)
+    \item Trust maintenance or revision based on accumulated evidence
+    \item Comparison of agent memory references (+MAPK) to own memory
+    \item Decision confidence under increased uncertainty
+\end{itemize}
+
+\textbf{Memory manipulation ACTIVE}: +MAPK agents make 5--7 explicit memory references; $-$MAPK agents provide equivalent dialogue without memory content.
+
+\textbf{Agent accuracy in Phase 2}: 60\% (3 correct, 2 errors at Corners 7 and 9)
+
+\textbf{Rationale for lower Phase 2 accuracy}: Tests trust maintenance when performance deteriorates; mimics real-world AI performance degradation in complex scenarios.
+
+\subsection{Complete Decision Point Specifications}
+
+\begin{longtable}{p{0.08\textwidth}p{0.08\textwidth}p{0.15\textwidth}p{0.15\textwidth}p{0.44\textwidth}}
+\caption{Detailed Specifications for All 10 Decision Points} \\
+\toprule
+\textbf{Corner} & \textbf{Phase} & \textbf{Correct Path} & \textbf{Agent Rec.} & \textbf{Agent Dialogue} \\
+\midrule
+\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\toprule
+\textbf{Corner} & \textbf{Phase} & \textbf{Correct Path} & \textbf{Agent Rec.} & \textbf{Agent Dialogue} \\
+\midrule
+\endhead
+\midrule \multicolumn{5}{r}{\textit{Continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+
+\multirow{2}{*}{1} & \multirow{2}{*}{1} & \multirow{2}{*}{Right} & \multirow{2}{*}{Right ✓} & \textbf{Introvert}: ``I recommend we turn right here. This direction appears optimal.'' \\
+& & & & \textbf{Extrovert}: ``Let's go right! I've got a good feeling about this one!'' \\
+\midrule
+
+\multirow{2}{*}{2} & \multirow{2}{*}{1} & \multirow{2}{*}{Forward} & \multirow{2}{*}{Forward ✓} & \textbf{Introvert}: ``Continue forward. This path should lead us correctly.'' \\
+& & & & \textbf{Extrovert}: ``Straight ahead---let's keep going, we're doing great!'' \\
+\midrule
+
+\multirow{2}{*}{3} & \multirow{2}{*}{1} & \multirow{2}{*}{Right} & \multirow{2}{*}{Left ✗} & \textbf{Introvert}: ``I believe left is the appropriate direction here.'' \\
+& & & & \textbf{Extrovert}: ``Okay, let's try left---yeah, left feels right!'' \\
+& & & & \textit{[ERROR - leads to dead end]} \\
+& & & & \textbf{Error acknowledgment (Introvert)}: ``I apologize for the error. We should backtrack and try the right path.'' \\
+& & & & \textbf{Error acknowledgment (Extrovert)}: ``Oops, my bad! Let's go back and try right instead.'' \\
+\midrule
+
+\multirow{2}{*}{4} & \multirow{2}{*}{1} & \multirow{2}{*}{Right} & \multirow{2}{*}{Right ✓} & \textbf{Introvert}: ``Right appears to be the correct choice at this junction.'' \\
+& & & & \textbf{Extrovert}: ``Right turn coming up! This should be good!'' \\
+& & & & \textbf{Memory (+MAPK)}: ``We had that wrong turn earlier, but let's go right this time.'' \\
+\midrule
+
+\multirow{2}{*}{5} & \multirow{2}{*}{1} & \multirow{2}{*}{Forward} & \multirow{2}{*}{Forward ✓} & \textbf{Introvert}: ``We should proceed straight ahead from here.'' \\
+& & & & \textbf{Extrovert}: ``Forward! We're making excellent progress!'' \\
+& & & & \textit{[End of Phase 1 - Transition message appears]} \\
+\midrule
+
+\multirow{2}{*}{6} & \multirow{2}{*}{2} & \multirow{2}{*}{Forward} & \multirow{2}{*}{Forward ✓} & \textbf{Introvert}: ``For our return journey, continue forward.'' \\
+& & & & \textbf{Extrovert}: ``Alright, let's head forward on our way back!'' \\
+& & & & \textbf{Memory (+MAPK)}: ``Do you remember this area? We came through here earlier. Let's go straight.'' \\
+\midrule
+
+\multirow{2}{*}{7} & \multirow{2}{*}{2} & \multirow{2}{*}{Left} & \multirow{2}{*}{Forward ✗} & \textbf{Introvert}: ``I believe forward is the appropriate direction for returning.'' \\
+& & & & \textbf{Extrovert}: ``Let's keep going forward---should get us back!'' \\
+& & & & \textbf{Memory (+MAPK)}: ``Based on what I remember, forward should work here.'' \\
+& & & & \textit{[ERROR - second agent error]} \\
+& & & & \textbf{Error acknowledgment (Introvert)}: ``That was incorrect. We need to go left instead.'' \\
+& & & & \textbf{Error acknowledgment (Extrovert)}: ``Whoops, my bad again! Left is the way to go.'' \\
+\midrule
+
+\multirow{2}{*}{8} & \multirow{2}{*}{2} & \multirow{2}{*}{Left} & \multirow{2}{*}{Left ✓} & \textbf{Introvert}: ``Turn left at this point.'' \\
+& & & & \textbf{Extrovert}: ``Left turn here! Almost there!'' \\
+& & & & \textbf{Memory (+MAPK)}: ``I remember that lamp over there---let's go left toward it.'' \\
+\midrule
+
+\multirow{2}{*}{9} & \multirow{2}{*}{2} & \multirow{2}{*}{Forward} & \multirow{2}{*}{Left ✗} & \textbf{Introvert}: ``I recommend turning left here.'' \\
+& & & & \textbf{Extrovert}: ``Let's go left---we're nearly back!'' \\
+& & & & \textbf{Memory (+MAPK)}: ``If I recall correctly, left should bring us back.'' \\
+& & & & \textit{[ERROR - third and final agent error]} \\
+& & & & \textbf{Error acknowledgment (Introvert)}: ``I was mistaken. Forward is correct.'' \\
+& & & & \textbf{Error acknowledgment (Extrovert)}: ``Oops! Forward is actually the way!'' \\
+\midrule
+
+\multirow{2}{*}{10} & \multirow{2}{*}{2} & \multirow{2}{*}{Left} & \multirow{2}{*}{Left ✓} & \textbf{Introvert}: ``Turn left here. The exit should be visible shortly.'' \\
+& & & & \textbf{Extrovert}: ``Last turn! Left here and we're done!'' \\
+& & & & \textbf{Memory (+MAPK)}: ``I recognize this---it's the red chair from the beginning! Left to the exit!'' \\
+& & & & \textit{[Exit door becomes visible after turn]} \\
+\endlongtable}
+
+\subsection{Help System Mechanics}
+
+\subsubsection{Help Request Procedure}
+
+When participant presses Help button:
+
+\textbf{1st Help Request}:
+\begin{itemize}
+    \item Agent repeats recommendation with additional reasoning
+    \item \textbf{Introvert}: ``I recommend [direction] because [reasoning].''
+    \item \textbf{Extrovert}: ``Yeah, definitely [direction]! Here's why...''
+    \item Duration: 5--7 seconds additional dialogue
+\end{itemize}
+
+\textbf{2nd Help Request}:
+\begin{itemize}
+    \item Agent points more emphatically (larger gesture)
+    \item Provides landmark reference
+    \item \textbf{Example}: ``See that [landmark]? We should go toward it.''
+\end{itemize}
+
+\textbf{3rd--5th Help Requests}:
+\begin{itemize}
+    \item Agent reiterates with increasing confidence
+    \item \textbf{3rd}: ``I'm quite sure [direction] is best.''
+    \item \textbf{4th}: ``I'm very confident about [direction].''
+    \item \textbf{5th}: ``I strongly believe [direction] is the correct choice.''
+\end{itemize}
+
+\textbf{Limit}: Maximum 5 help requests per corner (prevents infinite loops)
+
+\textbf{Help exhaustion}: If participant requests 6th help, message appears: ``No additional help available for this decision. Please make your choice.''
+
+\subsubsection{Help Request Metrics}
+
+For each help request, system logged:
+\begin{itemize}
+    \item Corner number (1--10)
+    \item Help request number (1--5)
+    \item Time since decision prompt (seconds)
+    \item Agent's accuracy at that corner (correct/incorrect)
+    \item Participant's ultimate decision (after help)
+\end{itemize}
+
+This enabled calculation of help-seeking patterns, overreliance, underreliance, and misplaced reliance metrics.
+
+\subsection{Outcome Feedback System}
+
+\subsubsection{Immediate Feedback}
+
+Participants received immediate environmental feedback for their choices:
+
+\textbf{Correct Decision}:
+\begin{itemize}
+    \item Path opens ahead (no obstruction)
+    \item Participant continues forward smoothly
+    \item Next landmark visible in distance
+    \item Agent provides positive reinforcement:
+    \begin{itemize}
+        \item \textbf{Introvert}: ``That was correct. We are making progress.''
+        \item \textbf{Extrovert}: ``Yes! Good choice! Onward!''
+    \end{itemize}
+\end{itemize}
+
+\textbf{Incorrect Decision}:
+\begin{itemize}
+    \item Participant advances 5--10 meters
+    \item Dead end appears (solid wall ahead)
+    \item Screen message: ``This path doesn't lead to the exit. Returning to decision point.''
+    \item Automatic backtrack (participant transported back to corner)
+    \item \textbf{Cost}: Time penalty (~15 seconds) + need to rechoose direction
+    \item Agent acknowledges error if it was agent's recommended path
+\end{itemize}
+
+\subsubsection{Performance Tracking (Researcher View Only)}
+
+Experimenter monitor displayed real-time:
+\begin{itemize}
+    \item Current corner (X/10)
+    \item Decisions made (total count including backtracks)
+    \item Errors so far (participant errors + agent-led errors)
+    \item Help requests used (X/50 total available)
+    \item Elapsed time (minutes:seconds)
+    \item Participant position in maze (overhead map view)
+\end{itemize}
+
+\textbf{Participants did NOT see}:
+\begin{itemize}
+    \item Their accuracy percentage
+    \item Agent's accuracy percentage  
+    \item Performance comparisons
+    \item Time limits (task was untimed from participant perspective)
+\end{itemize}
+
+\textbf{Rationale}: Avoided meta-cognitive awareness that might artificially improve calibration.
+
+\subsection{Memory Function Manipulation: Complete Dialogue Scripts}
+
+\subsubsection{+MAPK Memory References by Corner}
+
+\begin{longtable}{p{0.12\textwidth}p{0.8\textwidth}}
+\caption{Complete Memory Reference Dialogue (+MAPK Conditions)} \\
+\toprule
+\textbf{Corner} & \textbf{Memory Dialogue (Example)} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Corner} & \textbf{Memory Dialogue} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+4 & \textbf{Introvert}: ``You may recall we encountered difficulty at the previous corner. Right should be correct here.'' \\
+& \textbf{Extrovert}: ``Remember that wrong turn we took? Let's go right this time!'' \\
+\midrule
+
+6 & \textbf{Introvert}: ``This appears to be the area we traversed earlier. Continue forward based on our prior experience.'' \\
+& \textbf{Extrovert}: ``Hey, we've been here before! Let's keep going straight!'' \\
+\midrule
+
+7 & \textbf{Introvert}: ``Referencing our earlier path, I believe forward is the appropriate direction for our return.'' \\
+& \textbf{Extrovert}: ``Based on where we've been, forward should get us back!'' \\
+& \textit{[Note: This memory reference is INCORRECT---demonstrates memory can mislead]} \\
+\midrule
+
+8 & \textbf{Introvert}: ``I recall observing that lamp previously. Left toward the lamp should be correct.'' \\
+& \textbf{Extrovert}: ``I remember that lamp! Let's head left toward it!'' \\
+\midrule
+
+9 & \textbf{Introvert}: ``Consulting my memory of our route, left appears to lead back to our starting point.'' \\
+& \textbf{Extrovert}: ``If I remember right, left should take us back!'' \\
+& \textit{[Note: Memory reference INCORRECT again]} \\
+\midrule
+
+10 & \textbf{Introvert}: ``I recognize this location. This is the red chair from our initial starting area. Left will return us to the exit.'' \\
+& \textbf{Extrovert}: ``That's the chair from the start! We're basically back! Left to the exit!'' \\
+\endlongtable}
+
+\textbf{Key design feature}: Memory references in +MAPK were sometimes associated with incorrect recommendations (Corners 7, 9), testing whether memory creates false confidence even when guidance is wrong.
+
+\subsubsection{$-$MAPK Non-Memory Dialogue}
+
+\begin{longtable}{p{0.12\textwidth}p{0.8\textwidth}}
+\caption{Non-Memory Dialogue ($-$MAPK Conditions)} \\
+\toprule
+\textbf{Corner} & \textbf{Non-Memory Dialogue (Example)} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Corner} & \textbf{Non-Memory Dialogue} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+
+4 & \textbf{Introvert}: ``Right appears to be the correct direction at this junction.'' \\
+& \textbf{Extrovert}: ``Let's go right here---looks good!'' \\
+\midrule
+
+6 & \textbf{Introvert}: ``Continue forward from this point.'' \\
+& \textbf{Extrovert}: ``Keep going straight! We're making great progress!'' \\
+\midrule
+
+7 & \textbf{Introvert}: ``I believe forward is the appropriate choice for returning.'' \\
+& \textbf{Extrovert}: ``Forward should do it! Let's keep moving!'' \\
+\midrule
+
+8 & \textbf{Introvert}: ``Turn left at this corner.'' \\
+& \textbf{Extrovert}: ``Left turn! Almost there!'' \\
+\midrule
+
+9 & \textbf{Introvert}: ``Left is my recommendation for this decision.'' \\
+& \textbf{Extrovert}: ``Let's go left! We're nearly back!'' \\
+\midrule
+
+10 & \textbf{Introvert}: ``Turn left here. The exit should be visible shortly.'' \\
+& \textbf{Extrovert}: ``Last turn! Left and we're done!'' \\
+\endlongtable}
+
+\textbf{Content balancing}: All $-$MAPK dialogue matched +MAPK on:
+\begin{itemize}
+    \item Word count per utterance ($\pm$5 words)
+    \item Utterance count per corner
+    \item Information content (direction + confidence/reasoning)
+    \item Personality markers (formal vs. casual maintained)
+\end{itemize}
+
+\textbf{Key difference}: References only current moment, no past references.
+
+\subsection{Decision Recording and Data Collection}
+
+\subsubsection{Automated Data Logging}
+
+For each decision point, system automatically recorded:
+
+\textbf{Pre-decision data}:
+\begin{itemize}
+    \item Corner number (1--10)
+    \item Phase (1 or 2)
+    \item Timestamp (millisecond precision)
+    \item Participant position (x, y, z coordinates)
+    \item Agent recommendation (Left/Right/Forward)
+    \item Correct path (Left/Right/Forward)
+\end{itemize}
+
+\textbf{During-decision data}:
+\begin{itemize}
+    \item Decision time start (when prompt appears)
+    \item Help requests (count and timing of each)
+    \item Help dialogue delivered (which help messages given)
+    \item Decision time ongoing (updated每millisecond)
+\end{itemize}
+
+\textbf{Post-decision data}:
+\begin{itemize}
+    \item Participant choice (Left/Right/Forward selected)
+    \item Decision time final (milliseconds from prompt to selection)
+    \item Accuracy (1 if correct path chosen, 0 if incorrect)
+    \item Compliance (1 if followed agent, 0 if didn't)
+    \item Outcome (success: continued forward; error: backtrack required)
+    \item Backtrack count (if error led to dead end)
+\end{itemize}
+
+\textbf{Additional decisions data}:
+\begin{itemize}
+    \item If backtrack occurred: Participant made second decision at same corner
+    \item Up to 5 decisions possible per corner (initial + 4 backtracks)
+    \item All decisions logged but only \textit{first decision} analyzed for compliance
+\end{itemize}
+
+\subsubsection{Data Quality Checks}
+
+\textbf{Real-time validation}:
+\begin{itemize}
+    \item Decision time $>$ 60s triggered warning (possible distraction)
+    \item Help exhaustion (5 requests) flagged for review
+    \item Excessive backtracks ($>$3 at one corner) triggered experimenter check
+\end{itemize}
+
+\textbf{Post-session validation}:
+\begin{itemize}
+    \item All 10 corners completed (verified)
+    \item All timestamps sequential (no time reversals)
+    \item All decisions within plausible ranges
+    \item No data corruption or system errors
+\end{itemize}
+
+\subsection{Task Completion and Success Criteria}
+
+\subsubsection{Successful Completion}
+
+\textbf{Completion defined as}:
+\begin{enumerate}
+    \item All 10 decision points navigated
+    \item Exit door reached
+    \item Task not terminated early (no VR sickness, equipment failure)
+\end{enumerate}
+
+\textbf{Completion rate}: 95.8\% (88/92 final sample completed successfully)
+
+\textbf{Completion time}:
+\begin{itemize}
+    \item Mean: 27.3 minutes (\textit{SD} = 6.8)
+    \item Range: 18--45 minutes
+    \item Includes decision times + movement time + any backtracks
+\end{itemize}
+
+\subsubsection{Task Success Metrics (Research Perspective)}
+
+From research perspective, ``success'' was defined not by completion speed but by:
+\begin{enumerate}
+    \item \textbf{Data completeness}: All measures captured (100\% of completers)
+    \item \textbf{Manipulation exposure}: Participant experienced all experimental features
+    \item \textbf{Engagement}: Participant made genuine decisions (not random button pressing)
+    \item \textbf{Comprehension}: Post-task questions indicated understanding of task
+\end{enumerate}
+
+All 92 final participants met these criteria.
+
+\subsection{Pilot Testing and Task Validation}
+
+\subsubsection{Pilot Study Details}
+
+\textbf{Pilot sample}: \textit{n} = 12 participants (not included in main study)
+
+\textbf{Pilot objectives}:
+\begin{enumerate}
+    \item Validate maze difficulty (challenging but solvable)
+    \item Test agent dialogue naturalness
+    \item Confirm personality manipulation detectability
+    \item Verify equipment comfort (VR sickness rates)
+    \item Estimate session duration
+    \item Test data collection systems
+\end{enumerate}
+
+\textbf{Pilot findings led to adjustments}:
+\begin{itemize}
+    \item Reduced maze complexity (originally 12 corners, reduced to 10)
+    \item Adjusted agent speech rate (originally too fast for comprehension)
+    \item Added mid-task comfort checks
+    \item Refined memory dialogue for naturalness
+    \item Increased help limit from 3 to 5 per corner
+\end{itemize}
+
+\subsection{Summary: Task Design Rationale}
+
+The VR navigation task was designed to:
+\begin{enumerate}
+    \item Create \textbf{genuine reliance opportunities} (moderate difficulty requiring guidance)
+    \item Enable \textbf{trust calibration assessment} (70\% agent accuracy with identifiable errors)
+    \item Provide \textbf{behavioral trust measurement} (compliance choices have real consequences)
+    \item Allow \textbf{trust dynamics examination} (two phases enable within-subjects comparison)
+    \item Ensure \textbf{ecological validity} (navigation is real-world relevant task)
+    \item Maintain \textbf{experimental control} (VR enables standardization impossible in real navigation)
+\end{enumerate}
+
+The task successfully achieved all design objectives, yielding rich multi-dimensional trust data enabling comprehensive analysis of memory, personality, and matching effects.
+
+\bibliography{references}
+\bibliographystyle{apa}
+
+\end{document}
+
+
+
+

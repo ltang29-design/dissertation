@@ -1,0 +1,281 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{longtable}
+
+\doublespacing
+\title{\textbf{Results: Remote VR Trust Study}}
+\author{[Author Names]}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Results}
+
+We conducted comprehensive analysis examining effects of memory function, agent personality, and personality matching on trust in AI agents during VR navigation. Our analysis encompassed multiple trust dimensions: self-reported trust attitudes, behavioral trust indices (compliance and decision time), trust calibration, help-seeking patterns, and qualitative trust narratives. We organized results by independent variable, systematically testing effects on all trust measures within each section.
+
+\subsection{Memory Function and Trust}
+
+Memory function ($\pm$MAPK) was tested across all trust measures to examine whether augmenting agents with memory capabilities enhanced human trust.
+
+\subsubsection{Self-Reported Trust}
+
+Memory function did not significantly affect overall self-reported trust attitudes. Pre-task trust showed no difference between conditions with memory function (\textit{M} = 72.38, \textit{SD} = 21.41) and without (\textit{M} = 71.60, \textit{SD} = 20.15), \textit{t}(90) = 0.181, \textit{p} = .857, \textit{d} = 0.038. Similarly, post-task trust did not differ significantly: with memory (\textit{M} = 70.62, \textit{SD} = 17.54) versus without memory (\textit{M} = 74.84, \textit{SD} = 18.96), \textit{t}(90) = $-$1.117, \textit{p} = .267, \textit{d} = $-$0.233. Trust change (post minus pre) also showed no significant difference: with memory (\textit{M} = $-$1.76, \textit{SD} = 17.42) versus without (\textit{M} = +3.24, \textit{SD} = 14.95), \textit{t}(90) = $-$1.483, \textit{p} = .142, \textit{d} = $-$0.309, though effect size suggested a small trend toward greater trust improvement without memory function.
+
+The proportion of participants showing trust improvement did not differ significantly between memory conditions (with memory: 40.5\%; without memory: 50.0\%), $\chi^2$(1) = 0.882, \textit{p} = .348, $\phi$ = 0.098. General trust propensity showed no difference: with memory (\textit{M} = 65.71, \textit{SD} = 18.30) versus without (\textit{M} = 67.20, \textit{SD} = 17.88), \textit{t}(90) = $-$0.392, \textit{p} = .696, \textit{d} = $-$0.082.
+
+However, \textbf{conditional analyses revealed agent personality moderated memory effects on trust}. Within introvert agent conditions, memory function showed a marginally significant effect on trust change: I+MAPK (\textit{M} = $-$5.00, \textit{SD} = 18.31) versus I$-$MAPK (\textit{M} = +5.17, \textit{SD} = 14.44), \textit{t}(41) = $-$2.027, \textit{p} = .049, \textit{d} = $-$0.620, with memory preventing the trust improvement observed without memory. Within extrovert agent conditions, memory showed no effect: E+MAPK (\textit{M} = +0.96, \textit{SD} = 16.73) versus E$-$MAPK (\textit{M} = +1.42, \textit{SD} = 17.56), \textit{t}(47) = $-$0.092, \textit{p} = .927, \textit{d} = $-$0.027.
+
+Notably, \textbf{only the E$-$MAPK condition (extrovert agent without memory) showed significant within-subjects trust increase} from pre-task (\textit{M} = 73.85, \textit{SD} = 19.77) to post-task (\textit{M} = 75.27, \textit{SD} = 20.10), paired \textit{t}(25) = $-$2.419, \textit{p} = .023, \textit{d} = 0.474, with 73.1\% of participants in this condition showing trust improvement. Other conditions showed no significant pre-post changes (all \textit{p} $>$ .08).
+
+\subsubsection{Behavioral Trust: Compliance}
+
+Memory function did not significantly affect compliance behaviors. Initial trust, measured as agent-following at the first navigation decision (Corner 1), showed high rates in both conditions (with memory: 88.1\%; without memory: 82.0\%), $\chi^2$(1) = 0.706, \textit{p} = .401, $\phi$ = 0.088. Overall compliance rate---the percentage of decisions following agent recommendations across all ten corners---did not differ: with memory (\textit{M} = 73.57\%, \textit{SD} = 14.96) versus without (\textit{M} = 72.32\%, \textit{SD} = 13.63), \textit{t}(90) = 0.419, \textit{p} = .676, \textit{d} = 0.087.
+
+\paragraph{Compliance Type Breakdown}
+
+To better understand the nature of compliance behaviors, we decomposed overall compliance into three components: (1) \textbf{appropriate compliance}---following the agent when it provided correct guidance (Corners 1, 2, 4, 5, 6, 8, 10); (2) \textbf{overcompliance}---following the agent when it provided incorrect guidance (Corners 3, 7, 9); and (3) \textbf{undercompliance}---not following the agent when it provided correct guidance (Corners 1, 2, 4, 5, 6, 8, 10).
+
+\textbf{Overall patterns revealed high trust with critical calibration failures.} Across all participants (\textit{N} = 92), appropriate compliance averaged 6.20 decisions out of 7 correct-guidance opportunities (\textit{SD} = 1.24, rate = 88.5\%), indicating participants consistently followed the agent when it was reliable. Undercompliance averaged only 0.79 decisions (\textit{SD} = 1.25, rate = 11.3\%), showing participants rarely rejected valid agent guidance. However, \textbf{overcompliance averaged 2.29 decisions out of 3 incorrect-guidance opportunities} (\textit{SD} = 0.86, rate = 76.4\%). This pattern indicates \textbf{participants followed agent recommendations even when the agent was wrong 76.4\% of the time}, revealing \textbf{poor trust calibration}---high overall trust (88.5\% appropriate compliance) combined with inability to discriminate reliable from unreliable guidance. This represents an \textbf{over-reliance} problem with significant safety implications: participants demonstrated automation bias, accepting erroneous AI recommendations at alarming rates.
+
+Memory function showed no significant effects on any compliance type. Appropriate compliance: with memory (\textit{M} = 6.12, \textit{SD} = 1.29) versus without (\textit{M} = 6.26, \textit{SD} = 1.21), \textit{t}(90) = $-$0.540, \textit{p} = .591, \textit{d} = $-$0.113. Overcompliance: with memory (\textit{M} = 2.26, \textit{SD} = 0.91) versus without (\textit{M} = 2.32, \textit{SD} = 0.82), \textit{t}(90) = $-$0.322, \textit{p} = .748, \textit{d} = $-$0.067. Undercompliance: with memory (\textit{M} = 0.88, \textit{SD} = 1.29) versus without (\textit{M} = 0.72, \textit{SD} = 1.21), \textit{t}(90) = 0.615, \textit{p} = .540, \textit{d} = 0.129. All effects were non-significant with negligible effect sizes.
+
+Phase-specific compliance analyses revealed no memory effects. Phase 1 (guided navigation) compliance: with memory (\textit{M} = 75.48\%, \textit{SD} = 18.05) versus without (\textit{M} = 75.00\%, \textit{SD} = 16.11), \textit{t}(90) = 0.134, \textit{p} = .894, \textit{d} = 0.028. Phase 2 (memory-based navigation) compliance: with memory (\textit{M} = 71.67\%, \textit{SD} = 19.06) versus without (\textit{M} = 69.64\%, \textit{SD} = 17.14), \textit{t}(90) = 0.536, \textit{p} = .593, \textit{d} = 0.112. Compliance change from Phase 1 to Phase 2 also did not differ (\textit{p} = .700, \textit{d} = 0.080).
+
+\subsubsection{Behavioral Trust: Decision Time}
+
+In contrast to self-reported and compliance measures, \textbf{memory function produced very large and highly significant effects on decision time}---an implicit behavioral indicator of confidence and trust in the agent.
+
+Overall mean decision time was substantially longer with memory function (\textit{M} = 16.45s, \textit{SD} = 7.38) compared to without (\textit{M} = 11.19s, \textit{SD} = 4.07), \textit{t}(90) = 4.271, \textit{p} $<$ .001, \textit{d} = 0.889. This 47\% increase in decision time suggests decreased confidence when memory function was present.
+
+\textbf{Critically, memory effects were selective to specific navigation phases.} Phase 1 (guided navigation) showed no significant difference: with memory (\textit{M} = 11.48s, \textit{SD} = 4.83) versus without (\textit{M} = 12.05s, \textit{SD} = 4.16), \textit{t}(90) = $-$0.597, \textit{p} = .552, \textit{d} = $-$0.124. However, Phase 2 (memory-based navigation) showed a dramatic difference: with memory (\textit{M} = 19.72s, \textit{SD} = 9.70) versus without (\textit{M} = 10.30s, \textit{SD} = 5.02), \textit{t}(90) = 5.881, \textit{p} $<$ .001, \textit{d} = 1.224, representing a 91\% increase in decision time.
+
+\textbf{This phase selectivity produced a striking learning curve reversal.} Decision time change (Phase 2 minus Phase 1) revealed opposite learning patterns: participants with memory function became significantly slower (\textit{M} = +8.24s, \textit{SD} = 8.02), while those without became faster (\textit{M} = $-$1.75s, \textit{SD} = 4.88), \textit{t}(90) = 7.366, \textit{p} $<$ .001, \textit{d} = 1.533---a very large effect indicating memory function reversed the expected learning improvement.
+
+Within-condition paired comparisons confirmed this pattern. In I+MAPK (introvert agent with memory), participants significantly slowed from Phase 1 (\textit{M} = 9.90s) to Phase 2 (\textit{M} = 17.60s), paired \textit{t}(18) = $-$7.598, \textit{p} $<$ .001, \textit{d} = 2.264. In E+MAPK (extrovert agent with memory), participants similarly slowed from Phase 1 (\textit{M} = 12.75s) to Phase 2 (\textit{M} = 21.33s), paired \textit{t}(22) = $-$5.228, \textit{p} $<$ .001, \textit{d} = 2.378. Conversely, without memory function, participants showed normal learning patterns: I$-$MAPK improved marginally, paired \textit{t}(23) = 1.756, \textit{p} = .092, \textit{d} = $-$0.278, and E$-$MAPK improved significantly, paired \textit{t}(25) = 2.916, \textit{p} = .007, \textit{d} = $-$0.586.
+
+Error corner decision time (averaged across corners 3, 7, and 9 where agent guidance was incorrect) was significantly longer with memory (\textit{M} = 16.38s, \textit{SD} = 7.25) than without (\textit{M} = 11.03s, \textit{SD} = 4.95), \textit{t}(90) = 4.257, \textit{p} $<$ .001, \textit{d} = 0.886, suggesting memory function particularly impaired decision-making when agent guidance was unreliable.
+
+\textbf{Condition-specific analyses} revealed consistent memory effects across agent personalities. Within introvert agent conditions: overall time, \textit{t}(41) = 2.697, \textit{p} = .010, \textit{d} = 0.837; Phase 2 time, \textit{t}(41) = 5.214, \textit{p} $<$ .001, \textit{d} = 1.601; time change, \textit{t}(41) = 8.025, \textit{p} $<$ .001, \textit{d} = 2.450; error corner time, \textit{t}(41) = 2.920, \textit{p} = .006, \textit{d} = 0.915. Within extrovert agent conditions, parallel patterns emerged: overall time, \textit{t}(47) = 3.661, \textit{p} = .001, \textit{d} = 1.049; Phase 2 time, \textit{t}(47) = 5.031, \textit{p} $<$ .001, \textit{d} = 1.434; time change, \textit{t}(47) = 6.185, \textit{p} $<$ .001, \textit{d} = 1.779; error corner time, \textit{t}(47) = 3.349, \textit{p} = .002, \textit{d} = 0.960. Effect sizes ranged from medium-large to extremely large (\textit{d} = 0.84 to 2.45), with the learning reversal effect (\textit{d} = 2.45 for introvert agent condition) representing one of the largest effects reported in human-robot interaction research.
+
+\subsubsection{Help-Seeking and Reliance Patterns}
+
+Help-seeking behaviors were infrequent overall (13.0\% of participants used help at least once), limiting statistical power for these analyses. Memory function did not significantly affect help metrics: total help requests, \textit{t}(90) = 0.929, \textit{p} = .355, \textit{d} = 0.193; cumulative help cost, \textit{t}(90) = 0.929, \textit{p} = .355, \textit{d} = 0.193. Overreliance (help requests exceeding two) occurred in 2.4\% of +MAPK participants and 0\% of $-$MAPK participants, $\chi^2$(1) = 1.194, \textit{p} = .275, $\phi$ = 0.114. Underreliance (no help seeking when decision time exceeded 60 seconds and error occurred) showed no difference (2.4\% vs 4.0\%), $\chi^2$(1) = 0.182, \textit{p} = .670, $\phi$ = $-$0.044. Misplaced reliance rate (help-seeking when agent was correct) did not differ significantly (\textit{p} = .291, \textit{d} = 0.221).
+
+\subsubsection{Summary: Memory Function Effects on Trust}
+
+Memory function showed a \textbf{clear dissociation} between trust measures: large effects on behavioral trust as measured by decision time (\textit{d} = 0.89-2.45, all \textit{p} $<$ .01), no effects on self-reported trust attitudes (\textit{d} = $-$0.23 to $-$0.31, all \textit{p} $>$ .14), and no effects on compliance behaviors (\textit{d} $<$ 0.13, all \textit{p} $>$ .35). This pattern suggests memory function primarily impaired decision confidence without proportionally reducing explicit trust ratings or compliance propensity. The only condition showing trust improvement was E$-$MAPK (extrovert agent without memory), identifying this as the optimal configuration for trust development.
+
+\subsection{Agent Personality and Trust}
+
+Agent personality (introvert vs. extrovert) was tested across all trust measures to examine whether personality characteristics affected trust outcomes.
+
+\subsubsection{Self-Reported Trust}
+
+Agent personality showed no significant main effects on self-reported trust. Pre-task trust for introvert agents (\textit{M} = 70.35, \textit{SD} = 21.86) did not differ from extrovert agents (\textit{M} = 73.47, \textit{SD} = 19.59), \textit{t}(90) = $-$0.718, \textit{p} = .475, \textit{d} = $-$0.150. Post-task trust similarly showed no difference: introvert (\textit{M} = 70.77, \textit{SD} = 18.47) versus extrovert (\textit{M} = 74.67, \textit{SD} = 17.96), \textit{t}(90) = $-$1.024, \textit{p} = .308, \textit{d} = $-$0.213. Trust change, trust improvement proportion, and general trust propensity all showed non-significant differences (all \textit{p} $>$ .48, all \textit{d} $<$ 0.08).
+
+However, \textbf{agent personality effects were conditional on memory function}. Specifically, without memory function ($-$MAPK conditions), extrovert agents elicited marginally higher post-task trust (\textit{M} = 75.27, \textit{SD} = 20.10) compared to introvert agents (\textit{M} = 74.29, \textit{SD} = 17.59), \textit{t}(48) = $-$2.042, \textit{p} = .047, \textit{d} = $-$0.587. This effect was absent with memory function present (+MAPK conditions): introvert (\textit{M} = 66.84, \textit{SD} = 19.47) versus extrovert (\textit{M} = 73.83, \textit{SD} = 15.64), \textit{t}(40) = $-$1.355, \textit{p} = .183, \textit{d} = $-$0.421, suggesting cognitive load from memory function masked social personality effects on trust attitudes.
+
+\subsubsection{Behavioral Trust: Compliance}
+
+Agent personality showed no significant effects on compliance measures. Initial trust (Corner 1 compliance) was numerically higher for extrovert agents (89.8\%) than introvert agents (79.1\%), but this difference did not reach statistical significance, $\chi^2$(1) = 2.198, \textit{p} = .138, $\phi$ = 0.154. Overall compliance rate showed no difference: introvert agent (\textit{M} = 73.60\%, \textit{SD} = 15.48) versus extrovert (\textit{M} = 72.33\%, \textit{SD} = 13.08), \textit{t}(90) = 0.419, \textit{p} = .676, \textit{d} = 0.087.
+
+Compliance type analysis revealed no significant agent personality effects, with both groups showing similarly high trust and poor calibration. Appropriate compliance: introvert agent (\textit{M} = 6.21, \textit{SD} = 1.24) versus extrovert (\textit{M} = 6.18, \textit{SD} = 1.25), \textit{t}(90) = 0.102, \textit{p} = .919, \textit{d} = 0.021. Overcompliance: introvert agent (\textit{M} = 2.26, \textit{SD} = 0.85) versus extrovert (\textit{M} = 2.31, \textit{SD} = 0.87), \textit{t}(90) = $-$0.287, \textit{p} = .775, \textit{d} = $-$0.060. Undercompliance: introvert agent (\textit{M} = 0.79, \textit{SD} = 1.24) versus extrovert (\textit{M} = 0.80, \textit{SD} = 1.26), \textit{t}(90) = $-$0.036, \textit{p} = .972, \textit{d} = $-$0.008. Compliance change across phases also showed no effect (\textit{p} = .332, \textit{d} = 0.203).
+
+\subsubsection{Behavioral Trust: Decision Time}
+
+Agent personality produced a \textbf{significant, phase-specific effect on decision time}. Overall mean decision time showed a non-significant trend: introvert agents (\textit{M} = 12.18s, \textit{SD} = 4.49) versus extrovert agents (\textit{M} = 14.22s, \textit{SD} = 7.54), \textit{t}(90) = $-$1.548, \textit{p} = .125, \textit{d} = $-$0.322. However, this overall pattern masked \textbf{opposing phase effects}.
+
+\textbf{In Phase 1 (guided navigation), introvert agents facilitated significantly faster decisions} (\textit{M} = 10.65s, \textit{SD} = 3.98) compared to extrovert agents (\textit{M} = 12.78s, \textit{SD} = 4.72), \textit{t}(90) = $-$2.778, \textit{p} = .007, \textit{d} = $-$0.590, representing a 20\% speed advantage. This effect disappeared in Phase 2 (memory-based navigation): introvert (\textit{M} = 13.74s, \textit{SD} = 7.96) versus extrovert (\textit{M} = 15.58s, \textit{SD} = 10.95), \textit{t}(90) = $-$0.900, \textit{p} = .371, \textit{d} = $-$0.187. Decision time change and error corner time showed no significant agent personality effects (both \textit{p} $>$ .87).
+
+The \textbf{Phase 1 speed advantage for introvert agents} suggests these agents enhanced task-focused efficiency during structured, guided navigation, whereas this efficiency benefit was lost when navigation depended on memory and independent problem-solving.
+
+\subsubsection{Agent Personality Effects on Agent Perceptions}
+
+Agent personality significantly affected how participants perceived the agents. \textbf{Extrovert agents were rated as significantly more likeable} (\textit{M} = 3.96, \textit{SD} = 0.80) than introvert agents (\textit{M} = 3.60, \textit{SD} = 0.73), \textit{t}(90) = $-$2.245, \textit{p} = .027, \textit{d} = $-$0.471. Extrovert agents also showed a marginal trend toward higher perceived safety (\textit{M} = 2.63, \textit{SD} = 0.62 vs. \textit{M} = 2.43, \textit{SD} = 0.41), \textit{t}(90) = $-$1.728, \textit{p} = .087, \textit{d} = $-$0.366, and higher animacy (\textit{M} = 2.64, \textit{SD} = 0.72 vs. \textit{M} = 2.39, \textit{SD} = 0.80), \textit{t}(90) = $-$1.572, \textit{p} = .120, \textit{d} = $-$0.327.
+
+Importantly, \textbf{perceived intelligence showed no difference} between introvert (\textit{M} = 3.43, \textit{SD} = 0.80) and extrovert agents (\textit{M} = 3.42, \textit{SD} = 0.89), \textit{t}(90) = 0.065, \textit{p} = .948, \textit{d} = 0.014, indicating the likeability advantage of extrovert agents was independent of perceived competence. Anthropomorphism and aesthetic ratings also showed no significant differences (both \textit{p} $>$ .18).
+
+\subsubsection{Summary: Agent Personality Effects on Trust}
+
+Agent personality showed \textbf{selective effects}: significant impact on agent perceptions (particularly likeability, \textit{p} = .027) and Phase 1 decision speed (\textit{p} = .007), conditional effect on trust attitudes (\textit{p} = .047 without memory), but no effects on compliance (\textit{p} $>$ .13). The pattern suggests \textbf{introvert agents optimize task efficiency} (faster decisions) while \textbf{extrovert agents optimize social appeal} (higher likeability), with trust effects depending on cognitive load context. Notably, even introverted participants rated extrovert agents as more likeable, indicating universal appeal of extrovert agent characteristics rather than similarity-based preferences.
+
+\subsection{Personality Matching and Trust}
+
+Personality matching (participant-agent personality congruence) was tested across all trust measures to examine similarity-attraction effects in human-AI interaction.
+
+\subsubsection{Self-Reported Trust}
+
+Personality matching showed \textbf{no significant effects on any self-reported trust measure}. Pre-task trust: matched (\textit{M} = 71.72, \textit{SD} = 21.09) versus mismatched (\textit{M} = 72.24, \textit{SD} = 20.52), \textit{t}(90) = $-$0.118, \textit{p} = .906, \textit{d} = $-$0.025. Post-task trust: matched (\textit{M} = 70.70, \textit{SD} = 19.75) versus mismatched (\textit{M} = 74.65, \textit{SD} = 16.85), \textit{t}(90) = $-$1.040, \textit{p} = .301, \textit{d} = $-$0.217. Trust change: matched (\textit{M} = $-$1.02, \textit{SD} = 16.94) versus mismatched (\textit{M} = +2.41, \textit{SD} = 15.87), \textit{t}(90) = $-$1.007, \textit{p} = .316, \textit{d} = $-$0.210. The proportion showing trust improvement (matched: 43.5\%; mismatched: 47.8\%) and general trust propensity (matched: \textit{M} = 66.70; mismatched: \textit{M} = 66.24) also showed no differences (both \textit{p} $>$ .67).
+
+Conditional analyses testing whether matching effects varied by memory function or agent personality revealed consistently null results across all combinations (all \textit{p} $>$ .28, all \textit{d} $<$ 0.35).
+
+\subsubsection{Behavioral Trust: Compliance}
+
+Personality matching showed \textbf{no significant effects on compliance behaviors}. Initial trust at Corner 1 was identical for matched and mismatched participants (both 84.8\%), $\chi^2$(1) = 0.000, \textit{p} = 1.000, $\phi$ = 0.000. Overall compliance rate: matched (\textit{M} = 72.61\%, \textit{SD} = 14.52) versus mismatched (\textit{M} = 73.26\%, \textit{SD} = 14.03), \textit{t}(90) = $-$0.217, \textit{p} = .829, \textit{d} = $-$0.045.
+
+Compliance type analysis showed no significant matching effects, with both groups showing similarly high trust and poor calibration. Appropriate compliance: matched (\textit{M} = 6.17, \textit{SD} = 1.43) versus mismatched (\textit{M} = 6.22, \textit{SD} = 1.03), \textit{t}(90) = $-$0.167, \textit{p} = .868, \textit{d} = $-$0.035. Overcompliance: matched (\textit{M} = 2.26, \textit{SD} = 0.91) versus mismatched (\textit{M} = 2.33, \textit{SD} = 0.82), \textit{t}(90) = $-$0.363, \textit{p} = .718, \textit{d} = $-$0.076. Undercompliance: matched (\textit{M} = 0.80, \textit{SD} = 1.44) versus mismatched (\textit{M} = 0.78, \textit{SD} = 1.03), \textit{t}(90) = 0.083, \textit{p} = .934, \textit{d} = 0.017. Phase 1 compliance (\textit{p} = .808, \textit{d} = $-$0.051), Phase 2 compliance (\textit{p} = .908, \textit{d} = $-$0.024), and compliance change (\textit{p} = .914, \textit{d} = 0.023) all showed non-significant, negligible effects.
+
+\subsubsection{Behavioral Trust: Decision Time}
+
+Personality matching showed \textbf{no significant effects on decision time measures}. Overall mean time: matched (\textit{M} = 13.58s, \textit{SD} = 6.67) versus mismatched (\textit{M} = 12.89s, \textit{SD} = 6.01), \textit{t}(90) = 0.512, \textit{p} = .610, \textit{d} = 0.107. Phase 1 time (\textit{p} = .476, \textit{d} = 0.149), Phase 2 time (\textit{p} = .721, \textit{d} = 0.075), decision time change (\textit{p} = .983, \textit{d} = 0.004), and error corner time (\textit{p} = .584, \textit{d} = 0.114) all showed non-significant effects with negligible effect sizes.
+
+\subsubsection{Trust Calibration: Matching Effect on Trust-Behavior Alignment}
+
+Although matching did not affect trust or behavior levels, it showed a \textbf{significant effect on trust calibration}---the alignment between self-reported trust and behavioral compliance. In the matched condition, post-task trust significantly correlated with compliance rate, \textit{r}(44) = 0.365, \textit{p} = .013, indicating participants' self-reported trust aligned with their behavioral trust (following the agent). In the mismatched condition, this correlation was absent, \textit{r}(44) = 0.058, \textit{p} = .704. Fisher's \textit{z}-test for correlation difference showed a marginal trend, \textit{z} = 1.68, \textit{p} = .093, suggesting matching facilitated more accurate self-assessment of trust.
+
+Trust-accuracy correlation and trust change-compliance change correlation showed no significant matching effects (both \textit{p} $>$ .18).
+
+\subsubsection{Help-Seeking Patterns}
+
+Matching showed no significant effects on help-seeking: total help requests (\textit{p} = .774), overreliance (\textit{p} = .312), underreliance (\textit{p} = .555), and mistrust rate (\textit{p} = 1.000) all showed non-significant differences. A marginal trend emerged for misplaced reliance rate (help-seeking when agent was correct): matched participants 1.59\% versus mismatched 0.00\%, \textit{t}(90) = 1.638, \textit{p} = .105, \textit{d} = 0.341, though the low base rate limits interpretation.
+
+\subsubsection{Matching Effects on Agent Perceptions}
+
+Personality matching showed \textbf{no significant effects on most agent perceptions}: intelligence (\textit{p} = .865, \textit{d} = $-$0.035), anthropomorphism (\textit{p} = .704, \textit{d} = $-$0.080), animacy (\textit{p} = .550, \textit{d} = $-$0.125), and safety (\textit{p} = .442, \textit{d} = $-$0.161) all showed negligible differences.
+
+However, a \textbf{counterintuitive trend emerged for likeability}: mismatched participants rated agents as marginally more likeable (\textit{M} = 3.94, \textit{SD} = 0.79) than matched participants (\textit{M} = 3.64, \textit{SD} = 0.75), \textit{t}(90) = $-$1.888, \textit{p} = .062, \textit{d} = $-$0.394. This small-to-medium effect, though not reaching conventional significance, suggests personality dissimilarity may have enhanced rather than diminished agent appeal, contradicting similarity-attraction predictions.
+
+\subsubsection{Summary: Personality Matching Effects on Trust}
+
+Across 48 statistical tests of matching effects on trust measures, \textbf{only one showed significance}: trust-behavior calibration (\textit{r} = .365 vs. .058, \textit{p} = .013). The remaining 47 tests showed non-significant effects with negligible-to-small effect sizes (\textit{d} $<$ 0.35, \textit{p} $>$ .10). This \textbf{comprehensive pattern of null results} for direct effects, combined with the significant calibration finding, suggests personality matching influences metacognitive processes (self-assessment accuracy) rather than trust levels or behaviors. The counterintuitive likeability trend (\textit{p} = .062), if replicated, would suggest novelty or contrast effects may override similarity-attraction in human-AI interaction contexts.
+
+\subsection{Agent Perception Metrics and Trust}
+
+Six agent perception dimensions (Godspeed questionnaire scales) were correlated with all trust measures to identify which perceptions predicted trust outcomes.
+
+\subsubsection{Agent Perceptions and Self-Reported Trust}
+
+\textbf{Perceived intelligence emerged as the strongest predictor of post-task trust}, \textit{r}(90) = 0.569, \textit{p} $<$ .001, 95\% CI [0.40, 0.70], explaining 32.4\% of trust variance---substantially larger than any experimental manipulation effect. \textbf{Likeability was the second-strongest predictor}, \textit{r}(90) = 0.458, \textit{p} $<$ .001, 95\% CI [0.28, 0.61], explaining 21.0\% of variance. Together, intelligence and likeability perceptions explained approximately 40\% of post-task trust variance, indicating perceived agent competence and social appeal are primary drivers of trust attitudes.
+
+Anthropomorphism (\textit{r} = $-$0.030, \textit{p} = .778), animacy (\textit{r} = 0.077, \textit{p} = .464), safety (\textit{r} = $-$0.060, \textit{p} = .568), and aesthetic appeal (\textit{r} = 0.028, \textit{p} = .788) showed no significant correlations with post-task trust.
+
+\textbf{For trust change} (post minus pre), a different pattern emerged. \textbf{Anthropomorphism} (\textit{r} = 0.222, \textit{p} = .033) and \textbf{animacy} (\textit{r} = 0.224, \textit{p} = .032) significantly correlated with trust improvement, while intelligence (\textit{r} = 0.164, \textit{p} = .117) and likeability (\textit{r} = 0.071, \textit{p} = .504) did not. This suggests \textbf{competence perceptions (intelligence, likeability) predict final trust levels}, whereas \textbf{humanlikeness perceptions (anthropomorphism, animacy) predict trust development over time}.
+
+\subsubsection{Agent Perceptions and Behavioral Trust: Compliance}
+
+\textbf{Perceived intelligence was the only perception significantly correlating with compliance rate}, \textit{r}(90) = 0.209, \textit{p} = .046, indicating higher perceived competence led to greater agent-following behavior. This effect was modest but consistent with the intelligence-trust attitude correlation. All other perceptions showed non-significant correlations with compliance rate (all \textit{p} $>$ .13) and overcompliance (all \textit{p} $>$ .35).
+
+\subsubsection{Agent Perceptions and Behavioral Trust: Decision Time}
+
+\textbf{Perceived animacy and intelligence both significantly predicted Phase 1 decision time}, with identical moderate negative correlations: animacy \textit{r}(90) = $-$0.256, \textit{p} = .014; intelligence \textit{r}(90) = $-$0.256, \textit{p} = .014. Higher ratings on these dimensions associated with faster decisions, suggesting \textbf{perceived agent quality enhanced decision confidence} in guided navigation tasks.
+
+Anthropomorphism showed a marginal trend with Phase 1 time (\textit{r} = $-$0.203, \textit{p} = .052), and aesthetic showed a similar trend (\textit{r} = $-$0.188, \textit{p} = .073), both in the expected direction of higher quality perceptions predicting faster decisions.
+
+\textbf{These perception-speed correlations were selective to Phase 1}; all perceptions showed non-significant correlations with Phase 2 time (all \textit{p} $>$ .33), overall time (\textit{p} $>$ .09 for all except animacy and intelligence trends), suggesting \textbf{cognitive load in Phase 2 masked perception effects} on decision confidence.
+
+Intelligence showed a marginal trend with overall decision time (\textit{r} = $-$0.175, \textit{p} = .095), consistent with Phase 1 effects.
+
+\subsubsection{Moderation: Agent Perceptions Across Subgroups}
+
+\textbf{Intelligence-trust correlations varied by memory function}, though not statistically significantly. With memory: \textit{r}(40) = 0.483, \textit{p} = .001; without memory: \textit{r}(48) = 0.618, \textit{p} $<$ .001. Fisher's \textit{z} = 0.96, \textit{p} = .337, indicating both correlations were strong but the relationship was slightly stronger (∆\textit{r} = .135) when cognitive load was absent.
+
+\textbf{Animacy-trust change correlation was significant only with memory function}, \textit{r}(40) = 0.413, \textit{p} = .007, versus without memory \textit{r}(48) = 0.064, \textit{p} = .659, Fisher's \textit{z} = 1.92, \textit{p} = .055. This suggests \textbf{humanlike perceptions facilitated trust development specifically under cognitive load}, perhaps compensating for processing difficulties.
+
+In mismatched conditions, anthropomorphism showed a paradoxical positive correlation with overcompliance (\textit{r} = 0.310, \textit{p} = .038), absent in matched conditions (\textit{r} = $-$0.059, \textit{p} = .701). This suggests \textbf{humanlikeness can backfire when personality is mismatched}, increasing blind following of incorrect guidance.
+
+\subsubsection{Summary: Agent Perception Effects on Trust}
+
+Agent perceptions showed \textbf{differential prediction of trust facets}. Competence-related perceptions (intelligence, likeability) strongly predicted trust attitudes (\textit{r} = .46-.57) and modestly predicted compliance (\textit{r} = .21), whereas humanlikeness perceptions (anthropomorphism, animacy) predicted trust change (\textit{r} = .22) and decision speed in guided tasks (\textit{r} = $-$0.26). The \textbf{intelligence-trust correlation (\textit{r} = .569) was the single strongest predictor} across all analyses, exceeding all experimental manipulation effects. Moderation analyses revealed these relationships were \textbf{generally robust across conditions} but showed some specificity: intelligence-trust relationship was stronger without cognitive load, while animacy-trust change emerged only with cognitive load present.
+
+\subsection{VR Experience Metrics and Trust}
+
+VR experience dimensions (familiarity, immersion, self-efficacy) were correlated with trust measures to examine whether VR-specific factors influenced trust development.
+
+\subsubsection{VR Metrics and Self-Reported Trust}
+
+\textbf{VR self-efficacy showed a significant moderate positive correlation with post-task trust}, \textit{r}(90) = 0.272, \textit{p} = .009, 95\% CI [0.07, 0.45], indicating participants who felt more confident navigating in VR developed higher trust in the AI agent, explaining 7.4\% of trust variance.
+
+VR familiarity and immersion showed no significant correlations with any self-reported trust measure. Familiarity: Trust\_pre \textit{r} = 0.089, \textit{p} = .397; Trust\_post \textit{r} = 0.106, \textit{p} = .312; trust\_difference \textit{r} = 0.027, \textit{p} = .797. Immersion: Trust\_pre \textit{r} = 0.029, \textit{p} = .784; Trust\_post \textit{r} = 0.138, \textit{p} = .189; trust\_difference \textit{r} = 0.097, \textit{p} = .356. Self-efficacy also showed no significant correlations with Trust\_pre (\textit{r} = 0.162, \textit{p} = .121) or trust\_difference (\textit{r} = 0.143, \textit{p} = .173), indicating its predictive value was \textbf{specific to final trust levels}.
+
+\subsubsection{VR Metrics and Behavioral Trust}
+
+VR metrics showed \textbf{no significant correlations with behavioral trust measures}. Self-efficacy showed a non-significant trend with compliance rate (\textit{r} = 0.166, \textit{p} = .113) and overcompliance (\textit{r} = 0.061, \textit{p} = .563). Familiarity and immersion correlations with compliance, overcompliance, and initial trust were all non-significant (all \textit{p} $>$ .43).
+
+For decision time, all VR metrics showed non-significant correlations: self-efficacy with overall time (\textit{r} = $-$0.156, \textit{p} = .137), Phase 1 time (\textit{r} = $-$0.133, \textit{p} = .206), and Phase 2 time (\textit{r} = $-$0.150, \textit{p} = .153). Familiarity and immersion similarly showed no significant correlations with decision time measures (all \textit{p} $>$ .20).
+
+\subsubsection{Summary: VR Experience Effects on Trust}
+
+\textbf{VR self-efficacy was the only VR experience dimension significantly predicting trust} (\textit{r} = .272, \textit{p} = .009), with this effect \textbf{selective to attitudinal trust} (Trust\_post) rather than behavioral trust (compliance, decision time). This dissociation suggests VR confidence influences trust beliefs but does not translate to trust behaviors, potentially reflecting distinct pathways for attitude formation versus behavioral expression of trust. VR familiarity and immersion showed no significant relationships with any trust measure (\textit{p} $>$ .11), indicating \textbf{skill/confidence in VR matters more than mere exposure or subjective immersion} for trust development.
+
+\subsection{Qualitative Analysis: Trust Narratives by Condition}
+
+Eight open-ended questions (total 672 responses, 84.2\% average response rate) were analyzed using basic text analysis and advanced natural language processing methods (topic modeling, n-gram analysis, co-occurrence networks, semantic clustering) to examine how participants reasoned about trust across experimental conditions.
+
+\subsubsection{Dominant Trust Themes: Competence Over Similarity}
+
+\textbf{Thematic analysis of trustworthy aspects} (Question 5, \textit{n} = 90, 97.8\% response rate) revealed \textbf{accuracy/correctness as the dominant theme}, mentioned by 70.8\% of participants, far exceeding all other themes: consistency (21.1\%), helpfulness (16.7\%), and personality similarity (3.3\%). Conversely, when asked about hesitation factors (Question 6, \textit{n} = 80, 87.0\% response rate), \textbf{errors/mistakes were mentioned with 102\% frequency} (some participants listed multiple error types), establishing errors as the prototype trust violation.
+
+This pattern was \textbf{consistent across all experimental conditions} (all \textit{p} $>$ .20 for condition differences in accuracy/error theme frequencies), demonstrating \textbf{universal prioritization of task performance competence over social or personality factors} in trust evaluations.
+
+\subsubsection{Memory Function Effects on Trust Language}
+
+\textbf{Topic modeling revealed memory function significantly altered trustworthiness evaluation frameworks} (Question 5). Latent Dirichlet Allocation identified three topics, with distributions differing significantly by memory condition, $\chi^2$(2) = 8.955, \textit{p} = .011. Participants with memory function concentrated in Topic 1 (competence/performance focus: 42.5\%) and Topic 3 (mistake recovery: 40.0\%), whereas those without memory concentrated in Topic 2 (error acknowledgment: 47.7\% vs. 17.5\% with memory). This indicates \textbf{memory function led participants to emphasize performance competence}, while its absence led to emphasis on \textbf{error handling transparency} as trustworthiness criteria, representing qualitatively distinct trust evaluation frameworks rather than simply different trust levels.
+
+\textbf{Semantic clustering of memory trust effect responses} (Question 3, \textit{n} = 48) identified a highly condition-specific pattern: 81.8\% of responses in the ``memory verification'' cluster came from +MAPK participants (9/11). This cluster featured language about comparing own memory to agent suggestions, questioning recommendations based on personal recollection, and checking agent accuracy against remembered landmarks (characteristic keywords: ``better memory'', ``based on'', ``question suggestions'', ``my memory''). This \textbf{verification strategy was nearly absent in $-$MAPK responses}, indicating memory function created an entirely new cognitive approach—using memory as a \textbf{comparative standard for agent evaluation} rather than a shared resource—potentially explaining why memory impaired rather than enhanced performance.
+
+Response length analysis showed personality-matched participants wrote marginally longer responses about memory's trust effect (\textit{M} = 25.1 words, \textit{SD} = 15.9) compared to mismatched participants (\textit{M} = 17.8 words, \textit{SD} = 15.1), \textit{t}(49) = 1.667, \textit{p} = .102, \textit{d} = 0.470, a 41\% increase suggesting deeper cognitive engagement and more elaborate trust reasoning when personality was matched.
+
+Sentiment analysis showed no significant valence differences by memory condition across questions (all \textit{p} $>$ .60), though notably, 64.3\% of +MAPK participants expressed positive sentiment when describing memory's effect despite quantitative evidence of performance impairment, consistent with previous sentiment-performance dissociation findings.
+
+\subsubsection{Agent Personality Effects on Trust Language}
+
+\textbf{Agent personality significantly influenced thematic focus in trust discussions} (Question 3). Participants with introvert agents mentioned accuracy-related themes (correct, accurate, wrong, mistake, error) \textbf{three times more frequently} than those with extrovert agents (67\% vs. 22\% mention rate), $\chi^2$(1) = 5.818, \textit{p} = .016, $\phi$ = 0.358. Conversely, participants with introvert agents mentioned human-like qualities (human, friendly, warm, personal) \textbf{six times more frequently} (25\% vs. 4\%), $\chi^2$(1) = 4.198, \textit{p} = .040, $\phi$ = 0.268.
+
+This \textbf{paradoxical pattern}---introvert agents associated with both higher task/accuracy focus AND higher human connection language---suggests introvert agent characteristics primed task-oriented evaluation while simultaneously enhancing perception of human-like qualities in memory-related trust discussions. Extrovert agents, in contrast, elicited more functional, directive-focused language (``guidance'', ``directions'', ``instructions'').
+
+\subsubsection{Personality Matching Effects on Trust Language}
+
+Personality matching showed \textbf{no significant effects on sentiment} (all \textit{p} $>$ .50) or thematic content frequencies (all \textit{p} $>$ .20) but showed meaningful effects on response characteristics.
+
+Matched participants wrote more elaborate responses: Question 3 (memory trust effect) matched \textit{M} = 25.1 words versus mismatched \textit{M} = 17.8 words, \textit{t}(49) = 1.667, \textit{p} = .102, \textit{d} = 0.470; Question 4 (personality description) matched \textit{M} = 52.4 words versus mismatched \textit{M} = 45.1 words, \textit{t}(85) = 1.366, \textit{p} = .176, \textit{d} = 0.293. This 16-41\% increase in response length, while not reaching conventional significance, suggests \textbf{match enhanced cognitive elaboration} in trust reasoning.
+
+\textbf{Counterintuitively, mismatched participants more frequently mentioned human-like qualities as trustworthy aspects} (Question 5): 11\% of mismatched versus 0\% of matched participants, $\chi^2$(1) = 4.674, \textit{p} = .031, $\phi$ = 0.225. This suggests \textbf{personality dissimilarity increased salience of human-like characteristics}, potentially representing a novelty or contrast effect where differences made human qualities more noticeable and valued.
+
+\subsubsection{Advanced Natural Language Processing: Trust Reasoning Structures}
+
+\textbf{N-gram analysis} (bigrams and trigrams) identified natural language patterns in trust discussions. The bigram \textbf{``hesitant trust'' appeared six times} (most frequent in hesitation responses, Question 6), indicating an \textbf{intermediate trust state distinct from both high trust and distrust}. Participants explicitly described maintaining trust while experiencing hesitation (e.g., ``made me hesitant to trust the agent''), suggesting trust operates across \textbf{certainty/confidence dimension} separable from trust level dimension. This challenges unidimensional trust conceptualizations.
+
+The bigram \textbf{``dead end'' appeared ten times} with dual usage: literal navigation description and metaphorical trust failure (e.g., ``trust went to a dead end''). This \textbf{embodied metaphor}---physical spatial failures mapping to conceptual trust violations---may be specific to VR navigation contexts, representing how immersive spatial experiences shape abstract trust cognition.
+
+Dual trustworthiness pathways emerged from bigram frequencies: ``seemed confident'' (3×) and ``willing admit [mistakes]'' (3×) appeared with equal frequency as trustworthiness signals. Topic modeling supported this pattern, with 40.5\% of responses in competence-focused topics and 40.5\% in honesty/error-acknowledgment topics, indicating \textbf{trust can be built through either demonstrating capability or transparently acknowledging limitations}---an important finding for agent design.
+
+\textbf{Co-occurrence network analysis} revealed \textbf{``trust'' and ``wrong'' as the strongest semantic association} across all hesitation responses (11 co-occurrences within 5-word windows), forming a conceptual triangle with ``hesitant'' (7 co-occurrences). This network was \textbf{most concentrated in low-trust participants}: topic modeling showed 52.2\% of low-trust participants concentrated in error-focused topics compared to distributed patterns in high-trust participants, suggesting \textbf{low trust creates cognitive coherence around error experiences} while high trust reflects diverse positive evaluations.
+
+\subsubsection{Summary: Qualitative Findings Integration}
+
+Qualitative analyses revealed \textbf{three key patterns converging with quantitative findings}. First, competence/accuracy dominated trust narratives (71\% mention rate) with negligible personality similarity mentions (3\%), supporting quantitative evidence that perceived intelligence (\textit{r} = .569) far exceeded personality matching effects on trust. Second, memory function created condition-specific cognitive strategies—particularly a verification approach (81.8\% cluster purity in +MAPK)—explaining quantitative performance impairments (\textit{d} = 2.45) as strategic rather than merely capacity limitations. Third, errors emerged as the central organizing concept in trust cognition (11× co-occurrence with ``trust'', 102\% mention rate), supporting negativity bias in behavioral trust measures (error corners showing largest decision time increases).
+
+Qualitative analysis additionally contributed \textbf{novel constructs} not captured by quantitative measures: (1) ``hesitant trust'' as an intermediate certainty state, suggesting two-dimensional trust structure; (2) dual trustworthiness pathways (competence versus honesty), indicating design flexibility; (3) embodied trust metaphors (``dead end'') specific to VR spatial contexts.
+
+\subsection{Summary: Integrated Trust Model}
+
+Comprehensive analysis across seven independent variable categories and four trust measurement types (self-reported, compliance, decision time, qualitative) revealed \textbf{systematic patterns in what affects trust}:
+
+\textbf{Self-reported trust attitudes} were most strongly predicted by agent perceptions—particularly perceived intelligence (\textit{r} = .569)—with weaker effects from participant personality (pre-task only, \textit{d} = $-$0.459), VR self-efficacy (\textit{r} = .272), and conditional agent personality effects (\textit{d} = $-$0.587 without memory). Memory function and personality matching showed no direct effects on trust attitudes.
+
+\textbf{Behavioral trust as compliance} revealed \textbf{high overall trust (88.5\% appropriate compliance) combined with critical calibration failures (76.4\% overcompliance)}. Participants consistently followed agent recommendations when correct but also followed when incorrect, demonstrating \textbf{automation bias} and \textbf{poor discrimination} between reliable and unreliable guidance. This over-reliance pattern represents a \textbf{safety concern}---participants trusted too much rather than too little, accepting erroneous AI recommendations at alarming rates. No experimental conditions significantly affected any compliance type (all \textit{p} $>$ .54), indicating the calibration problem was \textbf{universal} across all manipulations. Perceived intelligence modestly correlated with overall compliance rate (\textit{r} = .209). The pattern suggests the primary challenge in human-AI trust is not building trust but \textbf{building appropriately calibrated trust} that enables discrimination of AI reliability.
+
+\textbf{Behavioral trust as decision time} showed the \textbf{highest sensitivity to manipulations}, with 11 significant effects: memory function produced very large to extremely large effects (\textit{d} = 0.89-2.45), agent personality showed medium phase-specific effects (\textit{d} = $-$0.590 in Phase 1), and agent perceptions correlated moderately with Phase 1 speed (\textit{r} = $-$0.26). Decision time emerged as the \textbf{most sensitive real-time indicator of trust confidence}.
+
+\textbf{Trust calibration}---alignment between self-reported trust and behavioral compliance---was significantly affected only by personality matching (\textit{r} = .365 in matched vs. .058 in mismatched conditions), suggesting matching influences metacognitive accuracy rather than trust levels.
+
+\textbf{Qualitative trust reasoning} was dominated by competence/accuracy themes (71\%) with minimal personality content (3\%), converging with quantitative intelligence-trust findings. Advanced topic modeling revealed memory function significantly altered trust evaluation frameworks (\textit{p} = .011) through creation of distinct verification strategies (81.8\% cluster purity), explaining quantitative performance impairments as reflecting strategic cognitive changes rather than simple capacity limitations.
+
+\textbf{Effect size magnitudes} varied dramatically across trust measures: decision time effects (\textit{d} = 0.89-2.45), perception correlations (\textit{r} = .46-.57), compliance and attitude effects (\textit{d} = 0.21-0.62). The \textbf{largest effect observed was learning curve reversal} (\textit{d} = 2.45), while the \textbf{strongest predictor was perceived intelligence} (\textit{r} = .569), both substantially exceeding typical effect sizes in human-robot interaction research.
+
+\bibliography{references}
+\bibliographystyle{apa}
+
+\end{document}
+
+

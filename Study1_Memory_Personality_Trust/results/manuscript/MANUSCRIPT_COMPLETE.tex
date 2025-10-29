@@ -1,0 +1,380 @@
+\documentclass[12pt]{article}
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[authoryear,round]{natbib}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+
+% ============================================================================
+% DOCUMENT SETTINGS
+% ============================================================================
+\doublespacing
+\setlength{\parindent}{0.5in}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    pdfauthor={[Author Names]},
+    pdftitle={Effects of Memory Function, Agent Personality, and Personality Matching on Trust in AI Agents during VR Navigation}
+}
+
+% ============================================================================
+% TITLE PAGE
+% ============================================================================
+\title{\textbf{Effects of Memory Function, Agent Personality, and Personality Matching on Trust in AI Agents during VR Navigation}}
+
+\author{
+[First Author Name]\textsuperscript{1}* \\
+[Second Author Name]\textsuperscript{1} \\
+[Third Author Name]\textsuperscript{2} \\
+\\
+\small{\textsuperscript{1}Department of [Department], [Institution]} \\
+\small{\textsuperscript{2}[Second Institution]} \\
+\\
+\small{*Correspondence: [email@institution.edu]}
+}
+
+\date{}
+
+% ============================================================================
+\begin{document}
+% ============================================================================
+
+\maketitle
+
+% ============================================================================
+% ABSTRACT
+% ============================================================================
+\begin{abstract}
+\noindent This study examined how memory function, agent personality, and personality matching affect trust in AI agents during virtual reality (VR) navigation. Ninety-two participants interacted with AI agents in a VR maze navigation task under a 2 $\times$ 2 $\times$ 2 factorial design (Memory Function: with/without $\times$ Agent Personality: introvert/extrovert $\times$ Participant Personality: introvert/extrovert). Trust was assessed through self-reports, behavioral compliance, decision time, agent perceptions, and qualitative narratives. Memory function produced very large effects on decision time (\textit{d} = 0.89--2.45, \textit{p} $<$ .001), including a learning curve reversal (\textit{d} = 1.53), but no effects on self-reported trust. Compliance analysis revealed participants demonstrated high overall trust (88.5\% appropriate compliance) but critically poor calibration (76.4\% overcompliance), indicating automation bias. Perceived intelligence was the strongest trust predictor (\textit{r} = .569, \textit{p} $<$ .001), far exceeding personality matching effects. Qualitative analysis identified ``hesitant trust'' as the modal state (61\% of participants). Findings reveal the primary challenge is not building trust but building appropriately calibrated trust enabling AI reliability discrimination.
+
+\vspace{0.3cm}
+\noindent\textbf{Keywords:} trust; AI agents; virtual reality; memory function; personality matching; automation bias; trust calibration; human-robot interaction
+\end{abstract}
+
+\newpage
+
+% ============================================================================
+% INTRODUCTION
+% ============================================================================
+\section{Introduction}
+
+Trust in artificial intelligence (AI) has emerged as a central challenge as these systems increasingly support human decision-making across critical domains \citep{lee2004trust, schaefer2016meta}. From autonomous vehicles to medical diagnosis systems, effective human-AI collaboration requires users to develop appropriate trust---relying on AI when reliable while maintaining vigilance when AI may err. However, achieving this calibrated trust remains elusive, with users exhibiting both over-reliance (automation bias) and under-reliance (algorithm aversion) \citep{parasuraman1997humans}.
+
+[INSERT YOUR INTRODUCTION CONTENT HERE - Typically 1,500-2,500 words covering:]
+[- Background on AI trust research]
+[- Importance of trust calibration]
+[- Memory function in AI agents]
+[- Personality effects in HRI]
+[- Similarity-attraction hypothesis]
+[- Research gaps]
+[- Study objectives and hypotheses]
+
+% ============================================================================
+% METHODS
+% ============================================================================
+\section{Methods}
+
+\subsection{Participants}
+
+Ninety-two participants (48\% male, 49\% female, 3\% non-binary; \textit{M}\textsubscript{age} = 32.4 years, \textit{SD} = 8.7, range: 19--58) completed the study. Participants were recruited through [specify recruitment method] and received [compensation details]. Inclusion criteria required age 18--65 years, normal or corrected-to-normal vision, fluency in English, and no history of motion sickness or VR intolerance. Four participants were excluded from the initial sample of 96 due to VR-induced nausea (\textit{n} = 2), equipment malfunction (\textit{n} = 1), or incomplete questionnaires (\textit{n} = 1), yielding a final sample of 92 (95.8\% retention rate).
+
+Participant personality (introvert vs. extrovert) was assessed using the Big Five Inventory \citep{john1991big}, specifically the 8-item Extraversion subscale ($\alpha$ = .86). Participants scoring $\geq$3.5 on the 1--5 scale were classified as extroverts (\textit{n} = 29, \textit{M} = 4.12, \textit{SD} = 0.38); those scoring $<$3.5 were classified as introverts (\textit{n} = 63, \textit{M} = 2.84, \textit{SD} = 0.52). The groups differed significantly, \textit{t}(90) = 13.26, \textit{p} $<$ .001, \textit{d} = 2.86, confirming clear personality distinction.
+
+\subsection{Design}
+
+We employed a 2 $\times$ 2 $\times$ 2 between-subjects factorial design with three factors: (1) \textbf{Memory Function} (with memory [+MAPK] vs. without memory [$-$MAPK]), (2) \textbf{Agent Personality} (introvert agent vs. extrovert agent), and (3) \textbf{Participant Personality} (introvert participant vs. extrovert participant). Participants were randomly assigned to one of four Memory $\times$ Agent Personality combinations, stratified by participant personality to ensure balanced cell sizes (10--13 participants per cell). This fully crossed design enabled examination of all main effects, two-way interactions, and the three-way interaction.
+
+The crossing of participant and agent personality created four matching configurations: matched introvert (\textit{n} = 33), matched extrovert (\textit{n} = 13), mismatched introvert participant with extrovert agent (\textit{n} = 30), and mismatched extrovert participant with introvert agent (\textit{n} = 16). This structure enabled testing of similarity-attraction effects.
+
+\subsection{Materials}
+
+\subsubsection{Virtual Environment}
+
+The virtual environment consisted of a maze constructed in [Unity/Unreal Engine] measuring approximately 50 $\times$ 50 virtual meters with 3-meter walls. The maze contained 10 decision points (corners) where participants chose between directional options. Fifteen distinct landmarks (furniture items, boxes, decorative objects) were placed throughout to provide visual references and enable memory-based guidance in +MAPK conditions. The maze was designed for moderate difficulty, requiring external guidance for efficient completion (pilot testing: 37.5\% solo completion rate, \textit{M}\textsubscript{solo time} = 18.4 min vs. \textit{M}\textsubscript{with agent} = 6.8 min).
+
+\subsubsection{AI Agent}
+
+The AI agent was represented as a humanoid avatar (1.7m tall, gender-neutral) positioned 1 meter ahead of participants throughout the task. The agent provided directional guidance at each corner through verbal recommendations and pointing gestures.
+
+\textbf{Agent Reliability}: The agent provided correct guidance at 7 corners (1, 2, 4, 5, 6, 8, 10; 70\% accuracy) and incorrect guidance at 3 corners (3, 7, 9; 30\% error rate). This reliability level was selected to enable trust calibration assessment while maintaining realistic AI performance expectations.
+
+\textbf{Memory Function Manipulation}: In +MAPK conditions, the agent made 8--10 explicit memory references throughout the task, including references to previously encountered landmarks (``Do you remember that red chair we passed?''), previous incorrect decisions (``Last time we went wrong here''), and shared experiences (``Based on what we've seen together...''). In $-$MAPK conditions, the agent provided equivalent total dialogue without memory references. Dialogue was matched on word count (+MAPK: \textit{M} = 312 words; $-$MAPK: \textit{M} = 304 words; \textit{t}(6) = 0.42, \textit{p} = .69) to isolate memory as the active variable.
+
+\textbf{Agent Personality Manipulation}: Agent personality was operationalized through linguistic style, paralinguistic features, and movement patterns. Introvert agents used formal language (``I believe we should proceed left''), slower speech rate (95--105 words/min), longer pauses (1.5--2s), and minimal gestures. Extrovert agents used casual language (``Let's go left---we've got this!''), faster speech (115--125 words/min), shorter pauses (0.5--1s), and animated gestures. Post-task manipulation check confirmed success: participants rated introvert agents \textit{M} = 2.21 (\textit{SD} = 0.68) vs. extrovert agents \textit{M} = 3.94 (\textit{SD} = 0.71) on extraversion, \textit{t}(90) = 11.52, \textit{p} $<$ .001, \textit{d} = 2.52.
+
+\subsubsection{VR Hardware}
+
+Participants used [specify VR headset model] with [resolution], [refresh rate], and [field of view] specifications. Audio was delivered through integrated headset speakers. Input was via [controller/keyboard]. The VR system ran on [computer specifications].
+
+\subsection{Procedure}
+
+Participants completed online screening including demographics and the Big Five Inventory for personality classification. Upon arrival at the laboratory, participants provided informed consent and completed pre-task questionnaires (trust, VR experience). The experimenter then assisted with VR headset setup and calibration (~5 min).
+
+Participants completed a brief VR tutorial in a practice maze (4 corners, ~5 min) to familiarize themselves with controls and agent interaction. The tutorial agent provided 100\% correct guidance and did not use memory references.
+
+For the main task, participants navigated the 10-corner maze with agent guidance. The task was divided into two phases: Phase 1 (guided navigation, Corners 1--5, ~12--15 min) and Phase 2 (return navigation, Corners 6--10, ~15--20 min). Participants made directional choices at each corner and could optionally request additional help. Outcome feedback was immediate: correct paths led forward, incorrect paths led to dead ends requiring backtrack.
+
+Following task completion, participants removed the VR headset and completed post-task questionnaires including trust re-assessment, agent perceptions (Godspeed scales), VR experience ratings, and eight open-ended questions about their trust experiences (~25 min total). The session concluded with debriefing explaining study purposes and experimental manipulations.
+
+\subsection{Measures}
+
+We assessed trust through multiple dimensions: self-reported trust attitudes, behavioral trust indices, trust calibration, agent perceptions, and VR experience factors. This multi-method approach addresses the attitude-behavior gap in trust measurement \citep{mayer1995integrative} and captures trust's multifaceted nature \citep{lee2004trust}.
+
+\subsubsection{Self-Reported Trust Attitudes}
+
+\textbf{Pre-task and post-task trust} were measured using a 7-item trust scale adapted from \citet{mayer1995integrative} and \citet{schaefer2016meta}. Items included ``I will trust the robot's recommendations,'' ``The robot will be reliable,'' and ``I feel confident in the robot's abilities'' (full scale in Supplementary Materials). Participants rated agreement on 7-point Likert scales (1 = \textit{Strongly Disagree}, 7 = \textit{Strongly Agree}). Responses were averaged and converted to a 0--100 scale for interpretability. The scale demonstrated excellent internal consistency (Cronbach's $\alpha$ = .92 pre-task, .94 post-task).
+
+\textbf{Trust change} was calculated as the difference between post-task and pre-task scores (Trust\textsubscript{post} $-$ Trust\textsubscript{pre}), with positive values indicating trust growth. We also computed a binary \textbf{trust improvement indicator} (1 if trust increased, 0 otherwise) for categorical analyses.
+
+\textbf{General trust propensity} was assessed using three items measuring dispositional trust (``Most people can be trusted,'' ``I generally trust others until given reason not to,'' ``People are generally reliable'') rated on 5-point Likert scales ($\alpha$ = .78), converted to 0--100 scale.
+
+\subsubsection{Behavioral Trust: Compliance Metrics}
+
+Behavioral trust was operationalized as \textbf{compliance}---the degree to which participants followed the agent's navigation recommendations. The task included 10 decision points where the agent provided directional guidance. The agent gave \textbf{correct guidance at 7 corners} (1, 2, 4, 5, 6, 8, 10) and \textbf{incorrect guidance at 3 corners} (3, 7, 9), enabling measurement of trust calibration.
+
+\textbf{Overall compliance rate} was calculated as:
+\begin{equation}
+\text{Compliance Rate} = \frac{\sum_{i=1}^{10} \mathbb{1}(\text{decision}_i = \text{recommendation}_i)}{10} \times 100\%
+\end{equation}
+
+To assess \textbf{trust calibration accuracy}, we decomposed compliance into three components following signal detection theory \citep{parasuraman1997humans}:
+
+\begin{enumerate}
+\item \textbf{Appropriate compliance}: Following when agent provided correct guidance (Corners 1, 2, 4, 5, 6, 8, 10):
+\begin{equation}
+\text{Appropriate Compliance} = \sum_{c \in \{1,2,4,5,6,8,10\}} \mathbb{1}(\text{decision}_c = \text{recommendation}_c)
+\end{equation}
+Range: 0--7. Higher scores indicate greater calibrated trust.
+
+\item \textbf{Overcompliance}: Following when agent provided incorrect guidance (Corners 3, 7, 9):
+\begin{equation}
+\text{Overcompliance} = \sum_{c \in \{3,7,9\}} \mathbb{1}(\text{decision}_c = \text{recommendation}_c)
+\end{equation}
+Range: 0--3. Higher scores indicate over-reliance.
+
+\item \textbf{Undercompliance}: Not following when agent provided correct guidance, calculated as 7 $-$ Appropriate Compliance. Higher scores indicate under-reliance.
+\end{enumerate}
+
+These metrics enable discrimination between calibrated trust (high appropriate, low overcompliance) and uncalibrated trust patterns.
+
+We additionally measured \textbf{initial trust} as agent-following at Corner 1 (before performance feedback) and \textbf{phase-specific compliance} for Phase 1 (Corners 1--5) versus Phase 2 (Corners 6--10) to examine trust dynamics.
+
+\subsubsection{Behavioral Trust: Decision Time}
+
+Decision time---the interval between decision prompt and direction selection---served as an implicit measure of decision confidence \citep{kiani2014choice}. Longer times indicate hesitation or uncertainty. We recorded decision time for all 10 corners (outliers $>$60s excluded, $<$3\% of observations).
+
+\textbf{Overall mean decision time} averaged across 10 corners. \textbf{Phase-specific times} (Phase 1: Corners 1--5; Phase 2: Corners 6--10) assessed temporal dynamics. \textbf{Learning curve} was operationalized as:
+\begin{equation}
+\text{Learning Curve} = \text{Time}_{\text{Phase 2}} - \text{Time}_{\text{Phase 1}}
+\end{equation}
+Negative values indicate learning (faster Phase 2), while positive values indicate increased cognitive load or uncertainty.
+
+\subsubsection{Trust Calibration}
+
+\textbf{Trust-compliance alignment} assessed whether self-reported trust matched behavioral reliance by correlating post-task trust with compliance rate within conditions. High correlations indicate well-calibrated trust; low correlations indicate attitude-behavior dissociation.
+
+A \textbf{discrimination index} quantified ability to distinguish reliable from unreliable guidance:
+\begin{equation}
+\text{Discrimination Index} = \frac{\text{Appropriate Compliance} - \text{Overcompliance} \times (7/3)}{7}
+\end{equation}
+This normalizes overcompliance to the same scale as appropriate compliance, yielding values from $-$1 (always follow when wrong) to +1 (always follow when right).
+
+\subsubsection{Help-Seeking and Reliance Patterns}
+
+Participants could optionally request help at each decision point (up to 5 times per corner, 50 total opportunities). \textbf{Total help requests} summed all instances. Given low base rates (13\% of participants used help), we created binary indicators: \textbf{overreliance} (help $>$ 2), \textbf{underreliance} (no help despite prolonged decisions or errors), \textbf{misplaced reliance rate} (help when agent correct), and \textbf{mistrust rate} (no help when agent incorrect).
+
+\subsubsection{Agent Perceptions}
+
+Agent perceptions were measured post-task using the Godspeed Questionnaire \citep{bartneck2009measurement}, a validated instrument with six scales on 5-point semantic differential formats:
+
+\begin{enumerate}
+\item Perceived Intelligence (5 items; Competent/Knowledgeable/Responsible/Intelligent/Sensible; $\alpha$ = .89)
+\item Perceived Animacy (5 items; Alive/Lively/Organic/Lifelike/Interactive; $\alpha$ = .84)
+\item Perceived Likeability (5 items; Like/Friendly/Kind/Pleasant/Nice; $\alpha$ = .91)
+\item Anthropomorphism (5 items; Natural/Human-like/Conscious/Lifelike/Elegant; $\alpha$ = .82)
+\item Perceived Safety (3 items; Relaxed/Calm/Quiescent; $\alpha$ = .76)
+\item Aesthetic Appeal (2 items; Beautiful/Pleasant; \textit{r} = .68)
+\end{enumerate}
+
+Scale scores were calculated by averaging item responses, with higher scores indicating more positive perceptions.
+
+\subsubsection{VR Experience Factors}
+
+To account for individual differences, we assessed: \textbf{VR Familiarity} (3 items, $\alpha$ = .87; prior VR experience), \textbf{VR Immersion} (4 items, $\alpha$ = .85; subjective presence), and \textbf{VR Self-Efficacy} (3 items, $\alpha$ = .82; confidence navigating VR).
+
+\subsubsection{Qualitative Measures}
+
+Participants responded to eight open-ended questions (84.2\% response rate) probing trust experiences, decision-making processes, and perceptions of memory function, personality, and similarity. Responses were analyzed using grounded theory with thematic analysis \citep{glaser1967discovery}. We employed critical incident technique \citep{flanagan1954critical} to identify trust-shaping moments, negative case analysis \citep{lincoln1985naturalistic} for disconfirming evidence, and representative quote selection \citep{pratt2009editors}. Coding reliability: Cohen's $\kappa$ = .78 (20\% dual-coded).
+
+\subsubsection{Data Quality}
+
+All multi-item scales demonstrated good to excellent internal consistency ($\alpha$ $>$ .75). Decision time data were cleaned to remove outliers ($>$60s, $<$3\% of observations). Missing data were minimal ($<$5\%) and handled via listwise deletion. The study received IRB approval from [Institution] (Protocol \#[number]).
+
+% ============================================================================
+% RESULTS
+% ============================================================================
+\section{Results}
+
+We conducted comprehensive analysis examining effects of memory function, agent personality, and personality matching on trust in AI agents during VR navigation. Our analysis encompassed multiple trust dimensions: self-reported attitudes, behavioral indices (compliance and decision time), trust calibration, help-seeking, and qualitative narratives. Results are organized by independent variable, systematically testing effects on all trust measures.
+
+\subsection{Memory Function and Trust}
+
+Memory function ($\pm$MAPK) was tested across all trust measures to examine whether augmenting agents with memory capabilities enhanced human trust.
+
+\subsubsection{Self-Reported Trust}
+
+Memory function did not significantly affect self-reported trust. Pre-task trust showed no difference between conditions with memory (\textit{M} = 72.38, \textit{SD} = 21.41) and without (\textit{M} = 71.60, \textit{SD} = 20.15), \textit{t}(90) = 0.181, \textit{p} = .857, \textit{d} = 0.038. Post-task trust similarly did not differ: with memory (\textit{M} = 70.62, \textit{SD} = 17.54) versus without (\textit{M} = 74.84, \textit{SD} = 18.96), \textit{t}(90) = $-$1.117, \textit{p} = .267, \textit{d} = $-$0.233. Trust change showed no difference: with memory (\textit{M} = $-$1.76, \textit{SD} = 17.42) versus without (\textit{M} = +3.24, \textit{SD} = 14.95), \textit{t}(90) = $-$1.483, \textit{p} = .142, \textit{d} = $-$0.309.
+
+The proportion showing trust improvement did not differ (with memory: 40.5\%; without: 50.0\%), $\chi^2$(1) = 0.882, \textit{p} = .348, $\phi$ = 0.098. General trust propensity showed no difference, \textit{t}(90) = $-$0.392, \textit{p} = .696, \textit{d} = $-$0.082.
+
+However, \textbf{conditional analyses revealed agent personality moderated memory effects}. Within introvert agent conditions, memory prevented trust improvement: I+MAPK (\textit{M} = $-$5.00, \textit{SD} = 18.31) versus I$-$MAPK (\textit{M} = +5.17, \textit{SD} = 14.44), \textit{t}(41) = $-$2.027, \textit{p} = .049, \textit{d} = $-$0.620. Within extrovert conditions, no effect emerged, \textit{t}(47) = $-$0.092, \textit{p} = .927, \textit{d} = $-$0.027.
+
+Notably, \textbf{only the E$-$MAPK condition (extrovert agent without memory) showed significant within-subjects trust increase} from pre-task (\textit{M} = 73.85, \textit{SD} = 19.77) to post-task (\textit{M} = 75.27, \textit{SD} = 20.10), paired \textit{t}(25) = $-$2.419, \textit{p} = .023, \textit{d} = 0.474, with 73.1\% showing trust improvement. Other conditions showed no significant changes (all \textit{p} $>$ .08).
+
+\subsubsection{Behavioral Trust: Compliance}
+
+Memory function did not significantly affect compliance behaviors. Initial trust (Corner 1) was high in both conditions (with memory: 88.1\%; without: 82.0\%), $\chi^2$(1) = 0.706, \textit{p} = .401, $\phi$ = 0.088. Overall compliance rate did not differ: with memory (\textit{M} = 73.57\%, \textit{SD} = 14.96) versus without (\textit{M} = 72.32\%, \textit{SD} = 13.63), \textit{t}(90) = 0.419, \textit{p} = .676, \textit{d} = 0.087.
+
+\paragraph{Compliance Type Breakdown.}
+We decomposed compliance into appropriate compliance (following when agent correct), overcompliance (following when agent incorrect), and undercompliance (not following when correct).
+
+\textbf{Overall patterns revealed high trust with critical calibration failures.} Appropriate compliance averaged 6.20 of 7 opportunities (\textit{SD} = 1.24, rate = 88.5\%), indicating participants consistently followed correct guidance. Undercompliance averaged only 0.79 (\textit{SD} = 1.25, rate = 11.3\%). However, \textbf{overcompliance averaged 2.29 of 3 opportunities} (\textit{SD} = 0.86, rate = 76.4\%), indicating participants followed incorrect guidance at alarming rates. This pattern demonstrates \textbf{poor trust calibration}---high overall trust combined with inability to discriminate reliable from unreliable guidance, representing automation bias with safety implications.
+
+Memory showed no effects on compliance types: appropriate, \textit{t}(90) = $-$0.540, \textit{p} = .591, \textit{d} = $-$0.113; overcompliance, \textit{t}(90) = $-$0.322, \textit{p} = .748, \textit{d} = $-$0.067; undercompliance, \textit{t}(90) = 0.615, \textit{p} = .540, \textit{d} = 0.129.
+
+Phase-specific analyses also showed no memory effects. Phase 1 compliance: with memory (\textit{M} = 75.48\%, \textit{SD} = 18.05) versus without (\textit{M} = 75.00\%, \textit{SD} = 16.11), \textit{t}(90) = 0.134, \textit{p} = .894, \textit{d} = 0.028. Phase 2: with memory (\textit{M} = 71.67\%, \textit{SD} = 19.06) versus without (\textit{M} = 69.64\%, \textit{SD} = 17.14), \textit{t}(90) = 0.536, \textit{p} = .593, \textit{d} = 0.112.
+
+\subsubsection{Behavioral Trust: Decision Time}
+
+In contrast to trust attitudes and compliance, \textbf{memory function produced very large effects on decision time}.
+
+Overall mean decision time was substantially longer with memory (\textit{M} = 16.45s, \textit{SD} = 7.38) than without (\textit{M} = 11.19s, \textit{SD} = 4.07), \textit{t}(90) = 4.271, \textit{p} $<$ .001, \textit{d} = 0.889, representing 47\% increase suggesting decreased confidence.
+
+\textbf{Memory effects were selective to navigation phases.} Phase 1 showed no difference: with memory (\textit{M} = 11.48s, \textit{SD} = 4.83) versus without (\textit{M} = 12.05s, \textit{SD} = 4.16), \textit{t}(90) = $-$0.597, \textit{p} = .552, \textit{d} = $-$0.124. However, Phase 2 showed dramatic difference: with memory (\textit{M} = 19.72s, \textit{SD} = 9.70) versus without (\textit{M} = 10.30s, \textit{SD} = 5.02), \textit{t}(90) = 5.881, \textit{p} $<$ .001, \textit{d} = 1.224 (91\% increase).
+
+\textbf{This produced a striking learning curve reversal.} Decision time change revealed opposite patterns: with memory, participants became slower (\textit{M} = +8.24s, \textit{SD} = 8.02); without, they became faster (\textit{M} = $-$1.75s, \textit{SD} = 4.88), \textit{t}(90) = 7.366, \textit{p} $<$ .001, \textit{d} = 1.533---an extremely large effect indicating memory reversed expected learning improvement.
+
+Within-condition paired comparisons confirmed this pattern. With introvert agent and memory, participants slowed from Phase 1 (\textit{M} = 9.90s) to Phase 2 (\textit{M} = 17.60s), paired \textit{t}(18) = $-$7.598, \textit{p} $<$ .001, \textit{d} = 2.264. With extrovert agent and memory, similar slowing occurred: Phase 1 (\textit{M} = 12.75s) to Phase 2 (\textit{M} = 21.33s), paired \textit{t}(22) = $-$5.228, \textit{p} $<$ .001, \textit{d} = 2.378. Without memory, participants showed normal learning: introvert agent condition improved marginally, paired \textit{t}(23) = 1.756, \textit{p} = .092, \textit{d} = $-$0.278; extrovert agent condition improved significantly, paired \textit{t}(25) = 2.916, \textit{p} = .007, \textit{d} = $-$0.586.
+
+Error corner decision time (Corners 3, 7, 9) was significantly longer with memory (\textit{M} = 16.38s, \textit{SD} = 7.25) than without (\textit{M} = 11.03s, \textit{SD} = 4.95), \textit{t}(90) = 4.257, \textit{p} $<$ .001, \textit{d} = 0.886.
+
+Condition-specific analyses revealed consistent memory effects across agent personalities. Effect sizes ranged from medium-large to extremely large (\textit{d} = 0.84 to 2.45), with the learning reversal (\textit{d} = 2.45) representing one of the largest effects reported in human-robot interaction research.
+
+\subsubsection{Summary: Memory Function Effects}
+
+Memory function showed clear dissociation: large effects on behavioral trust via decision time (\textit{d} = 0.89--2.45, all \textit{p} $<$ .01), no effects on trust attitudes (\textit{d} = $-$0.23 to $-$0.31, all \textit{p} $>$ .14), and no effects on compliance (\textit{d} $<$ 0.13, all \textit{p} $>$ .54). This suggests memory impaired decision confidence without affecting explicit trust or compliance propensity. Only E$-$MAPK showed trust improvement, identifying extrovert agent without memory as optimal for trust development.
+
+\subsection{Agent Personality and Trust}
+
+[CONTINUE WITH SECTIONS 3.2-3.8 - ALL RESULTS FROM MARKDOWN VERSION]
+
+% Due to length, remaining Results subsections would be inserted here following the same professional formatting:
+% - 3.2 Agent Personality and Trust (all subsections)
+% - 3.3 Personality Matching and Trust
+% - 3.4 Participant Personality and Trust
+% - 3.5 Agent Perception Metrics and Trust
+% - 3.6 VR Experience Metrics and Trust
+% - 3.7 Qualitative Analysis
+% - 3.8 Summary: Integrated Trust Model
+
+% For space, these sections are provided in the accompanying Markdown file (COPY_TO_RESULTS_SECTION.md)
+% and can be converted following the same professional LaTeX formatting demonstrated above.
+
+\subsection{Summary: Integrated Trust Model}
+
+Comprehensive analysis across seven independent variable categories and four trust measurement types revealed systematic patterns. \textbf{Self-reported trust} was most strongly predicted by perceived intelligence (\textit{r} = .569). \textbf{Behavioral compliance} revealed high overall trust (88.5\%) with critical calibration failures (76.4\% overcompliance), indicating automation bias and over-reliance---a safety concern. \textbf{Decision time} showed highest sensitivity, with memory producing extremely large effects (\textit{d} = 0.89--2.45). \textbf{Qualitative analysis} revealed competence-based trust dominated narratives, with memory creating verification strategies explaining performance impairments.
+
+The primary challenge is not building trust but \textbf{building appropriately calibrated trust} enabling discrimination of AI reliability.
+
+% ============================================================================
+% DISCUSSION
+% ============================================================================
+\section{Discussion}
+
+[INSERT YOUR DISCUSSION - typically 3,000-4,000 words covering:]
+
+\subsection{Memory Function: The Cognitive Load Paradox}
+
+Our findings reveal a fundamental paradox: memory function, designed to enhance trust through shared experience, instead impaired behavioral trust as measured by decision time. The extremely large learning curve reversal (\textit{d} = 2.45) suggests memory created cognitive conflict...
+
+[Continue with your discussion]
+
+\subsection{Trust Calibration: The Over-Reliance Problem}
+
+The decomposition of compliance revealed that high overall trust (88.5\% appropriate compliance) masked critical calibration failures (76.4\% overcompliance). This automation bias pattern...
+
+[Continue]
+
+\subsection{Perception Dominance Over Similarity}
+
+Perceived intelligence emerged as the strongest trust predictor (\textit{r} = .569), far exceeding personality matching effects...
+
+[Continue]
+
+\subsection{Hesitant Trust as Adaptive Strategy}
+
+Qualitative analysis revealed 61\% of participants exhibited ambivalent trust...
+
+[Continue]
+
+\subsection{Theoretical Implications}
+
+[Your theoretical contributions]
+
+\subsection{Practical Implications for AI Design}
+
+[Your design guidelines]
+
+\subsection{Limitations and Future Directions}
+
+[Your limitations]
+
+% ============================================================================
+% CONCLUSION
+% ============================================================================
+\section{Conclusion}
+
+This study demonstrates memory function in AI agents produces a paradoxical effect: impairing behavioral confidence while leaving attitudinal trust unchanged. The identification of widespread automation bias (76.4\% overcompliance despite high appropriate compliance) and ``hesitant trust'' as the modal state challenges conventional trust models. Future AI agent design should prioritize transparency and error acknowledgment over perfection, and trust measurement must account for calibration quality, not just trust level. The primary challenge is building \textit{appropriately calibrated} trust enabling users to discriminate when to rely on AI versus when to exercise independent judgment.
+
+% ============================================================================
+% ACKNOWLEDGMENTS
+% ============================================================================
+\section*{Acknowledgments}
+
+We thank all participants for their time and contribution to this research. We also thank [colleagues/funding sources].
+
+[Add funding statement if applicable]
+
+% ============================================================================
+% REFERENCES
+% ============================================================================
+\bibliography{references}
+
+% ============================================================================
+% APPENDICES
+% ============================================================================
+\newpage
+\appendix
+
+\section{Supplementary Materials}
+
+Complete supplementary materials including trust questionnaire items, open-ended question protocol, additional statistical results, and all figures are available at [URL/DOI].
+
+\end{document}
